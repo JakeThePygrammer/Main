@@ -1,5 +1,3 @@
-print("Would you like to sign up for free pHd 2024 real not skam?")
-print("ur nam:deez nuts")
 def realnotscamindia2012(a):
     if a == "123456789012" or a == "123456789011":
         print("Yer snekky nigg noau yur maneis go bai-bai|||||||||||")
@@ -13,6 +11,8 @@ def realnotscamindia2012(a):
 
 
 for index in range(999):
+    print("Would you like to sign up for free pHd 2024 real not skam?")
+    print("ur nam:deez nuts")
     a = input("Entr numero on da karticka plese ")
     if a == "end":
         break

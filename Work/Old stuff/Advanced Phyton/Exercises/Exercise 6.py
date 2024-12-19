@@ -43,9 +43,9 @@ class Student:
         else:
             print("Enter a number in the format +38907XXXXXXX or 07XXXXXXX")
         print("Changing...")
-s1 = Student("Jakov", "Nestorovski", "070530915")
-s2 = Student("Ana", "Nikikievic", "076634382")
-s3 = Student("Petar", "Petkovski", "077648847")
+s1 = Student("Jake", "Nestor", "070316555")
+s2 = Student("Ana", "Colland", "076343215")
+s3 = Student("Petar", "Jamesons", "077555697")
 
 print(s1.getname())
 print(s2.getsurname())
@@ -53,7 +53,7 @@ print(s3.getphonenumber())
 print(s3.get_mobile_operator(s3.getphonenumber()))
 print(s1.getall())
 print(s1.get_mobile_operator(s1.getphonenumber()))
-s1.changeall("Miso", "Rogacik", "076813300")
+s1.changeall("Miso", "Dexter", "076555852")
 print(s1.getall())
 print(s1.get_mobile_operator(s1.getphonenumber()))
 

@@ -10,9 +10,9 @@ class Shopper:
             self.money -= value
         else:
             self.money = 0
-s1 = Shopper("Jakov", "Nestorovski", 1000)
-s2 = Shopper("Ana", "Nikikievic", 800)
-s3 = Shopper("Marko", "Kopacev", 600)
+s1 = Shopper("Jake", "Nestor", 1000)
+s2 = Shopper("Ana", "Colland", 800)
+s3 = Shopper("Marko", "Simonov", 600)
 list_shoppers = [s1,s2,s3]
 max_money = 0
 money_combined = 0

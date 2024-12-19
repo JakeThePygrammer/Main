@@ -1,8 +1,8 @@
-mydictionary = {'name':'Jakov','surname':'Nestorovski','favorite colour':'Blue','phone':'Samsung Galaxy S21','home country':'Macedonia','school':'OOU Lazo Angelovsi'}
+mydictionary = {'name':'Jake','surname':'Nestor','favorite colour':'Blue','phone':'Samsung Galaxy S21','home country':'Macedonia','school':'OOU Boris Trajkovski'}
 print(mydictionary)
 print(len(mydictionary))
 keys = ("name", "surname", "favorite colour","phone","home country","school")
-values = ("Jakov", "Nestorovski", "Blue","Samsung Galaxy S21","Macedonia","OOU Lazo Angelovski")
+values = ("Jake", "Nestor", "Blue","Samsung Galaxy S21","Macedonia","OOU Boris Trajkovski")
 dictionary = dict(zip(keys,values))
 print(keys)
 print(values)

@@ -49,7 +49,8 @@ while running:
         square_size += 10
     if keys[pg.K_MINUS] or keys[pg.K_UNDERSCORE]:
         square_size -= 10
-
+    square_x = max(0, min(SIRINA - square_size, square_x))
+    square_y = max(0, min(VISINA - square_size, square_y))
     # Цртање на квадратот
     pg.draw.rect(ekran,(pg.Color("Blue")), (square_x, square_y, square_size, square_size))
     pg.display.flip()

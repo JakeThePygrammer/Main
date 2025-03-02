@@ -23,7 +23,7 @@ else:
     f.close()
 
 if shoporgame == "1":
-    print("Welcome!")
+    print("Добродојде!")
     prozor = pygamebg.open_window(sirina, visina, "Dino Game")
 
     boja_igrac = (0, 255, 0)

@@ -16,7 +16,7 @@ else:
 
 if shoporgame == "1":
     print("Welcome!")
-    (sirina, visina) = (500, 300)
+    (sirina, visina) = (1000, 600)
     prozor = pygamebg.open_window(sirina, visina, "Dino Game")
 
     boja_igrac = (0, 255, 0)
@@ -126,6 +126,7 @@ if shoporgame == "1":
                 f.write(f"{str(newhighscore)}\n")
                 print(f"Новиот број на најмогу поминати препреки е {newhighscore}!")
             else:
+                f.write(f"{str(currenthighscore)}\n")
                 print(f"Бројот на најмногу поминати препреки е {currenthighscore}, ти не го достигна.")
             f.close()
             exit()
@@ -154,6 +155,7 @@ if shoporgame == "1":
                 f.write(f"{str(newhighscore)}\n")
                 print(f"Новиот број на најмогу поминати препреки е {newhighscore}!")
             else:
+                f.write(f"{str(currenthighscore)}\n")
                 print(f"Бројот на најмногу поминати препреки е {currenthighscore}, ти не го достигна.")
             f.close()
             exit()

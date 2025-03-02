@@ -5,7 +5,7 @@ try:
 except FileExistsError:
     pass
 else:
-    f = open("CoinsStore.txt", "w")
+    f = open("CoinsStore.txt", "a")
     f.write(f"{str(0)}\n")
     f.write(f"{str(0)}\n")
     f.write(f"{str(0)}\n")
@@ -33,7 +33,7 @@ skok_sila = -15
 # Променливи за следење на избегнати препреки и победен услов
 points = 0
 coins = 0
-win_threshold = 3  # Ако се избегнат 10 препреки, играчот победува
+win_threshold = 4  # Ако се избегнат 10 препреки, играчот победува
 level_threshold = 2
 levels = 1
 gamestart = False
@@ -120,7 +120,28 @@ def nov_frejm():
         if igrac.colliderect(prepreka):
             print("Судир! Играта заврши. Губење.")
             exit()
-
+    f = open("CoinsStore.txt", "r")
+    lines2 = f.readlines()
+    value3 = float(lines2[2]) + float(points)
+    if value3 >= win_threshold:
+        print("Победа! Ги избегнавте сите препреки. Оди во вториот свет при отварање.")
+        coins += 100
+        f.seek(0)
+        lines = f.readlines()
+        coins += int(lines[0])
+        currenthighscore = float(lines[3])
+        newhighscore = points + float(lines[2])
+        f = open("CoinsStore.txt", "w")
+        f.write(f"{str(coins)}\n")
+        f.write(f"{str(0)}\n")
+        f.write(f"{str(0)}\n")
+        if newhighscore > currenthighscore:
+            f.write(f"{str(newhighscore)}\n")
+            print(f"Новиот број на најмогу поминати препреки е {newhighscore}!")
+        else:
+            print(f"Бројот на најмногу поминати препреки е {currenthighscore}, ти не го достигна.")
+        f.close()
+        exit()
     if points >= level_threshold:
         f = open("CoinsStore.txt", "r")
         lines1 = f.readlines()
@@ -134,30 +155,22 @@ def nov_frejm():
         coins += int(lines[0])
         levels += int(lines[1])
         points += float(lines[2])
+        currenthighscore = float(lines[3])
+        newhighscore = points + float(lines[2])
         level_threshold += 1
         f.close()
         f = open("CoinsStore.txt", "w")
         f.write(f"{str(coins)}\n")
         f.write(f"{str(levels-1)}\n")
         f.write(f"{str(points)}\n")
+        if newhighscore > currenthighscore:
+            f.write(f"{str(newhighscore)}\n")
+            print(f"Новиот број на најмогу поминати препреки е {newhighscore}!")
+        else:
+            print(f"Бројот на најмногу поминати препреки е {currenthighscore}, ти не го достигна.")
         f.close()
         exit()
-    f = open("CoinsStore.txt", "r")
-    lines2 = f.readlines()
-    value3 = float(lines2[2]) + float(points)
-    if value3 >= win_threshold:
-        print("Победа! Ги избегнавте сите препреки. Оди во вториот свет при отварање.")
-        coins += 100
-        f.seek(0)
-        lines = f.readlines()
-        coins += int(lines[0])
-        level_threshold += 1
-        f = open("CoinsStore.txt", "w")
-        f.write(f"{str(coins)}\n")
-        f.write(f"{str(0)}\n")
-        f.write(f"{str(0)}\n")
-        f.close()
-        exit()
+
 
     crtanje()
 

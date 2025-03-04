@@ -54,8 +54,8 @@ if shoporgame == "1":
     def dodadi_prepreka():
         global prepreka_visina
         x_pocetok = sirina + random.randint(50, 200)
-        prepreka_visina = random.randint(math.floor(visina / 4.5), math.floor(visina / 2))
-        prepreka_visina1 = random.randint(math.floor(visina / 3), math.floor(visina / 2))
+        prepreka_visina = random.randint(math.floor(visina / 4.5 - 30), math.floor(visina / 2 - 30))
+        prepreka_visina1 = random.randint(math.floor(visina / 3 - 30), math.floor(visina / 2 - 30))
         rand_choice = random.randint(1, 2)
         if rand_choice == 1:
             prepreki.append(pg.Rect(x_pocetok, visina - prepreka_visina1, prepreka_sirina, prepreka_visina1))

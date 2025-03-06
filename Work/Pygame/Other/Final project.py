@@ -10,8 +10,6 @@ def screenres():
     (sirina, visina) = (root.winfo_screenwidth(),root.winfo_screenheight())
     root.destroy()
     return sirina, visina
-
-sirina, visina = screenres()
 try:
     f = open("CoinsStore.txt", "x")
     f.close()
@@ -23,16 +21,22 @@ else:
     f.write(f"{str(0)}\n")
     f.write(f"{str(0)}\n")
     f.write(f"{str(0)}\n")
+    f.write(f"{str("White")}\n")
+    f.write(f"{str(2)}\n")
+    f.write(f"{str(2)}\n")
     f.close()
+
+f = open("CoinsStore.txt", "r")
+lines = f.readlines()
+boja_igrac = lines[4]
+level_thresholds = lines[6]
+sirina, visina = screenres()
+
 
 if shoporgame == "1":
     print("Добродојде!")
     prozor = pygamebg.open_window(sirina, visina, "Jakov's game")
-
-    f = open("CoinsStore.txt", "r")
-    lines = f.readlines()
     igrac = pg.Rect(math.floor(sirina / 30), math.floor(sirina / 30), math.floor(sirina / 30), math.floor(sirina / 30))
-    boja_igrac = lines[4]
     f.close()
     boja_prepreka = (255, 0, 0)
     prepreki = []
@@ -45,8 +49,7 @@ if shoporgame == "1":
 
     points = 0
     coins = 0
-    win_threshold = 4
-    level_threshold = 2
+    level_threshold = int(level_thresholds)
     levels = 1
 
     def dodadi_prepreka():
@@ -89,6 +92,9 @@ if shoporgame == "1":
 
     def nov_frejm():
         global brzina_y, points, stuck, coins, level_threshold, lines, f, levels, value
+        keys = pg.key.get_pressed()
+        if keys[pg.K_e]:
+            exit()
         pritisnato = pg.key.get_pressed()
         if pritisnato[pg.K_DOWN]:
             brzina_y += 1
@@ -124,37 +130,14 @@ if shoporgame == "1":
 
         for prepreka in prepreki:
             if igrac.colliderect(prepreka):
-                print("Судир! Играта заврши. Губење.")
+                print("Судир! Играта заврши.")
                 exit()
-        f = open("CoinsStore.txt", "r")
-        lines2 = f.readlines()
-        value3 = float(lines2[2]) + float(points)
-        if value3 >= win_threshold:
-            print("Победа! Ги избегнавте сите препреки. Оди во вториот свет при отварање.")
-            coins += 100
-            f.seek(0)
-            lines = f.readlines()
-            coins += int(lines[0])
-            currenthighscore = float(lines[3])
-            newhighscore = points + float(lines[2])
-            f = open("CoinsStore.txt", "w")
-            f.write(f"{str(coins)}\n")
-            f.write(f"{str(0)}\n")
-            f.write(f"{str(0)}\n")
-            if newhighscore > currenthighscore:
-                f.write(f"{str(newhighscore)}\n")
-                print(f"Новиот број на најмогу поминати препреки е {newhighscore}!")
-            else:
-                f.write(f"{str(currenthighscore)}\n")
-                print(f"Бројот на најмногу поминати препреки е {currenthighscore}, ти не го достигна.")
-            f.close()
-            exit()
         if points >= level_threshold:
             f = open("CoinsStore.txt", "r")
             lines1 = f.readlines()
             value = int(lines1[1]) + int(levels)
             f.close()
-            print(f"Го поминавте левел {value}, отвори пак за следен левел. Доби 10 парички.")
+            print(f"Го поминавте левел {value}, отвори пак за следен левел. Добивте 10 парички.")
             f = open("CoinsStore.txt", "r")
             coins += 10
             levels += 1
@@ -176,6 +159,8 @@ if shoporgame == "1":
             else:
                 f.write(f"{str(currenthighscore)}\n")
                 print(f"Бројот на најмногу поминати препреки е {currenthighscore}, ти не го достигна.")
+            f.write(f"{str(boja_igrac)}\n")
+            f.write(f"{str(level_threshold)}\n")
             f.close()
             exit()
 
@@ -184,6 +169,7 @@ if shoporgame == "1":
     pygamebg.frame_loop(30, nov_frejm)
 
 if shoporgame == "2":
+    print("Добродојде!")
     colors = ["Red", "Blue", "Purple"]
     prozor = pygamebg.open_window(sirina, visina, "Jakov's shop")
     button_color = pg.Color("Red")
@@ -193,9 +179,9 @@ if shoporgame == "2":
     button_rect2 = pg.Rect(math.floor(sirina / 2.5), math.floor(visina / 5), math.floor(sirina / 5),math.floor(visina / 8))
     button_rect3 = pg.Rect(math.floor(sirina / 1.4), math.floor(visina / 5), math.floor(sirina / 4.5),math.floor(visina / 8))
     font = pg.font.SysFont("Arial", 60)
-    button_text = font.render("Red skin", True, pg.Color("White"))
-    button_text2 = font.render("Blue skin", True, pg.Color("White"))
-    button_text3 = font.render("Purple skin", True, pg.Color("White"))
+    button_text = font.render("Црвена коцка", True, pg.Color("White"))
+    button_text2 = font.render("Сина коцка", True, pg.Color("White"))
+    button_text3 = font.render("Виолетова коцка", True, pg.Color("White"))
 
 
 
@@ -228,6 +214,10 @@ if shoporgame == "2":
         prozor.blit(tekst, (rect_x, rect_y))
 
     def nov_frejm2():
+        global i
+        keys = pg.key.get_pressed()
+        if keys[pg.K_e]:
+            exit()
         press = False
         mouse_pos = pg.mouse.get_pos()
         crtanje2()

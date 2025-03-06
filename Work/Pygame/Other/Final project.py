@@ -2,6 +2,8 @@ import pygame as pg, pygamebg, random
 import tkinter as tk
 import math
 
+pg.init()
+
 shoporgame = input("Внеси што сакаш да правиш :\n1 - игра \n2 - продавница\n: ")
 def screenres():
     root = tk.Tk()
@@ -12,6 +14,7 @@ def screenres():
 sirina, visina = screenres()
 try:
     f = open("CoinsStore.txt", "x")
+    f.close()
 except FileExistsError:
     pass
 else:
@@ -24,11 +27,13 @@ else:
 
 if shoporgame == "1":
     print("Добродојде!")
-    prozor = pygamebg.open_window(sirina, visina, "Dino Game")
+    prozor = pygamebg.open_window(sirina, visina, "Jakov's game")
 
-    boja_igrac = (0, 255, 0)
+    f = open("CoinsStore.txt", "r")
+    lines = f.readlines()
     igrac = pg.Rect(math.floor(sirina / 30), math.floor(sirina / 30), math.floor(sirina / 30), math.floor(sirina / 30))
-
+    boja_igrac = lines[4]
+    f.close()
     boja_prepreka = (255, 0, 0)
     prepreki = []
     prepreka_sirina = math.floor(sirina / 30)
@@ -43,13 +48,6 @@ if shoporgame == "1":
     win_threshold = 4
     level_threshold = 2
     levels = 1
-    gamestart = False
-
-    def start(event):
-        global gamestart
-        if event.type == pg.MOUSEBUTTONDOWN:
-            gamestart = True
-
 
     def dodadi_prepreka():
         global prepreka_visina
@@ -67,7 +65,11 @@ if shoporgame == "1":
 
     def crtanje():
         prozor.fill((0, 0, 0))
-        pg.draw.rect(prozor, boja_igrac, igrac)
+        try:
+            player_color = pg.Color(str(boja_igrac.strip()))
+        except ValueError:
+            player_color = (255, 255, 255)
+        pg.draw.rect(prozor, player_color, igrac)
         for prepreka in prepreki:
             pg.draw.rect(prozor, boja_prepreka, prepreka)
         f = open("CoinsStore.txt", "r")
@@ -182,4 +184,109 @@ if shoporgame == "1":
     pygamebg.frame_loop(30, nov_frejm)
 
 if shoporgame == "2":
-    exit()
+    colors = ["Red", "Blue", "Purple"]
+    prozor = pygamebg.open_window(sirina, visina, "Jakov's shop")
+    button_color = pg.Color("Red")
+    button_color2 = pg.Color("Blue")
+    button_color3 = pg.Color("Purple")
+    button_rect = pg.Rect(math.floor(sirina / 6), math.floor(visina / 5), math.floor(sirina / 7),math.floor(visina / 8))
+    button_rect2 = pg.Rect(math.floor(sirina / 2.5), math.floor(visina / 5), math.floor(sirina / 5),math.floor(visina / 8))
+    button_rect3 = pg.Rect(math.floor(sirina / 1.4), math.floor(visina / 5), math.floor(sirina / 4.5),math.floor(visina / 8))
+    font = pg.font.SysFont("Arial", 60)
+    button_text = font.render("Red skin", True, pg.Color("White"))
+    button_text2 = font.render("Blue skin", True, pg.Color("White"))
+    button_text3 = font.render("Purple skin", True, pg.Color("White"))
+
+
+
+    def crtanje2():
+        prozor.fill((0, 0, 0))
+        pg.draw.rect(prozor, button_color, button_rect)
+        pg.draw.rect(prozor, button_color2, button_rect2)
+        pg.draw.rect(prozor, button_color3, button_rect3)
+        text_width, text_height = button_text.get_size()
+        text_x = button_rect.x + (button_rect.width - text_width) // 2
+        text_y = button_rect.y + (button_rect.height - text_height) // 2
+        prozor.blit(button_text, (text_x, text_y))
+        text_width, text_height = button_text.get_size()
+        text_x2 = button_rect2.x + (button_rect2.width - text_width) // 2
+        text_y2 = button_rect2.y + (button_rect2.height - text_height) // 2
+        prozor.blit(button_text, (text_x, text_y))
+        text_width, text_height = button_text.get_size()
+        text_x3 = button_rect3.x + (button_rect3.width - text_width) // 2
+        text_y3 = button_rect3.y + (button_rect3.height - text_height) // 2
+        prozor.blit(button_text, (text_x, text_y))
+        prozor.blit(button_text2, (text_x2, text_y2))
+        prozor.blit(button_text3, (text_x3, text_y3))
+        size = sirina / 25
+        sized = math.floor(size)
+        font = pg.font.SysFont("Arial", sized)
+        tekst = font.render("Цената е 10 пари за промена", True, pg.Color("White"))
+        rect_x = (sirina - size) // 3
+        rect_y = (visina - size) // 1.5
+
+        prozor.blit(tekst, (rect_x, rect_y))
+
+    def nov_frejm2():
+        press = False
+        mouse_pos = pg.mouse.get_pos()
+        crtanje2()
+        if button_rect.collidepoint(mouse_pos):
+            if pg.mouse.get_pressed()[0] and not press:
+                press = True
+                i = 0
+            elif pg.mouse.get_pressed()[0] and press:
+                press = False
+        if button_rect2.collidepoint(mouse_pos):
+            if pg.mouse.get_pressed()[0] and not press:
+                press = True
+                i = 1
+            elif pg.mouse.get_pressed()[0] and press:
+                press = False
+        if button_rect3.collidepoint(mouse_pos):
+            if pg.mouse.get_pressed()[0] and not press:
+                press = True
+                i = 2
+            elif pg.mouse.get_pressed()[0] and press:
+                press = False
+
+        f = open("CoinsStore.txt", "r")
+        lines = f.readlines()
+        money = int(lines[0])
+
+        size = sirina / 25
+        sized = math.floor(size)
+        font = pg.font.SysFont("Arial", sized)
+        tekst = font.render("Пари: " + str(money), True, pg.Color("White"))
+        prozor.blit(tekst, (10, 10))
+
+        if money < 10 and press:
+            text = font.render("Немаш доволно пари!", True, pg.Color("White"))
+            text_width, text_height = text.get_size()
+            text_x = sirina / 2 - text_width
+            text_y = visina // 2 - text_height
+            prozor.blit(text, (text_x, text_y))
+        x = 10
+        if money >= x and press:
+            money -= x
+            f = open("CoinsStore.txt", "r+")
+            lines = f.readlines()
+            if lines:
+                lines[0] = f"{money}\n"
+            else:
+                lines.append(f"{money}\n")
+            f.seek(0)
+            f.writelines(lines)
+            f.close()
+            f = open("CoinsStore.txt", "r+")
+            lines = f.readlines()
+            if lines:
+                lines[4] = f"{colors[i]}\n"
+            else:
+                lines.append(f"{colors[i]}\n")
+            f.seek(0)
+            f.writelines(lines)
+            f.close()
+            pg.time.delay(5)
+
+    pygamebg.frame_loop(30, nov_frejm2)

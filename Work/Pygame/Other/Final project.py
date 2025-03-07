@@ -83,7 +83,7 @@ if shoporgame == "1":
         size = sirina / 25
         sized = math.floor(size)
         font = pg.font.SysFont("Arial", sized)
-        tekst = font.render("Пројдени: " + str(value2), True, (255, 255, 255))
+        tekst = font.render("Пројдени: " + str(math.floor(value2)), True, (255, 255, 255))
         prozor.blit(tekst, (10, 10))
         tekst2 = font.render("Левел: " + str(value), True, (255, 255, 255))
         prozor.blit(tekst2, (10, size + 10))
@@ -156,10 +156,10 @@ if shoporgame == "1":
             f.write(f"{str(points)}\n")
             if newhighscore > currenthighscore:
                 f.write(f"{str(newhighscore)}\n")
-                print(f"Новиот број на најмогу поминати препреки е {newhighscore}!")
+                print(f"Новиот број на најмогу поминати препреки е {math.floor(newhighscore)}!")
             else:
                 f.write(f"{str(currenthighscore)}\n")
-                print(f"Бројот на најмногу поминати препреки е {currenthighscore}, ти не го достигна.")
+                print(f"Бројот на најмногу поминати препреки е {math.floor(currenthighscore)}, ти не го достигна.")
             f.write(f"{str(boja_igrac)}\n")
             f.write(f"{str(level_threshold)}\n")
             f.close()
@@ -281,3 +281,5 @@ if shoporgame == "2":
             pg.time.delay(5)
 
     pygamebg.frame_loop(30, nov_frejm2)
+else:
+    print("Немате внесено точна бројка.")

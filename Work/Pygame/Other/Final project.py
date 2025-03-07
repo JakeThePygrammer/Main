@@ -147,7 +147,7 @@ if shoporgame == "1":
             levels += int(lines[1])
             points += float(lines[2])
             currenthighscore = float(lines[3])
-            newhighscore = points + float(lines[2])
+            newhighscore = points
             level_threshold += 1
             f.close()
             f = open("CoinsStore.txt", "w")

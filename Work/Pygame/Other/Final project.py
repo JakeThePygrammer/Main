@@ -175,9 +175,9 @@ if shoporgame == "2":
     button_color = pg.Color("Red")
     button_color2 = pg.Color("Blue")
     button_color3 = pg.Color("Purple")
-    button_rect = pg.Rect(math.floor(sirina / 6), math.floor(visina / 5), math.floor(sirina / 7),math.floor(visina / 8))
+    button_rect = pg.Rect(math.floor(sirina / 8), math.floor(visina / 5), math.floor(sirina / 5),math.floor(visina / 8))
     button_rect2 = pg.Rect(math.floor(sirina / 2.5), math.floor(visina / 5), math.floor(sirina / 5),math.floor(visina / 8))
-    button_rect3 = pg.Rect(math.floor(sirina / 1.4), math.floor(visina / 5), math.floor(sirina / 4.5),math.floor(visina / 8))
+    button_rect3 = pg.Rect(math.floor(sirina / 1.4), math.floor(visina / 5), math.floor(sirina / 3.7),math.floor(visina / 8))
     font = pg.font.SysFont("Arial", 60)
     button_text = font.render("Црвена коцка", True, pg.Color("White"))
     button_text2 = font.render("Сина коцка", True, pg.Color("White"))
@@ -199,7 +199,7 @@ if shoporgame == "2":
         text_y2 = button_rect2.y + (button_rect2.height - text_height) // 2
         prozor.blit(button_text, (text_x, text_y))
         text_width, text_height = button_text.get_size()
-        text_x3 = button_rect3.x + (button_rect3.width - text_width) // 2
+        text_x3 = button_rect3.x + (button_rect3.width - text_width) // 4
         text_y3 = button_rect3.y + (button_rect3.height - text_height) // 2
         prozor.blit(button_text, (text_x, text_y))
         prozor.blit(button_text2, (text_x2, text_y2))

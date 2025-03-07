@@ -1,4 +1,5 @@
-import pygame as pg, pygamebg, random
+import pygame as pg, pygamebg
+import random
 import tkinter as tk
 import math
 

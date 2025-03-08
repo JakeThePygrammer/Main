@@ -24,8 +24,8 @@ else:
     f.write(f"{str(0)}\n")
     f.write(f"{str(0)}\n")
     f.write(f"{str("White")}\n")
-    f.write(f"{str(6)}\n")
-    f.write(f"{str(6)}\n")
+    f.write(f"{str(20)}\n")
+    f.write(f"{str(20)}\n")
     f.close()
 
 f = open("CoinsStore.txt", "r")

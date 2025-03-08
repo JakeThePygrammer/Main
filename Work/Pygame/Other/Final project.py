@@ -1,4 +1,5 @@
-import pygame as pg, pygamebg
+import pygame as pg
+import pygamebg
 import random
 import tkinter as tk
 import math
@@ -39,7 +40,7 @@ if shoporgame == "1":
     prozor = pygamebg.open_window(sirina, visina, "Jakov's game")
     igrac = pg.Rect(math.floor(sirina / 30), math.floor(sirina / 30), math.floor(sirina / 30), math.floor(sirina / 30))
     f.close()
-    boja_prepreka = (255, 0, 0)
+
     prepreki = []
     prepreka_sirina = math.floor(sirina / 30)
     prepreka_visina = 100
@@ -69,6 +70,7 @@ if shoporgame == "1":
 
     def crtanje():
         prozor.fill((0, 0, 0))
+        boja_prepreka = (random.randint(0, 255), random.randint(0, 255), random.randint(0, 255))
         try:
             player_color = pg.Color(str(boja_igrac.strip()))
         except ValueError:
@@ -85,7 +87,7 @@ if shoporgame == "1":
         font = pg.font.SysFont("Arial", sized)
         tekst = font.render("Пројдени: " + str(math.floor(value2)), True, (255, 255, 255))
         prozor.blit(tekst, (10, 10))
-        tekst2 = font.render("Левел: " + str(value), True, (255, 255, 255))
+        tekst2 = font.render("Ниво: " + str(value), True, (255, 255, 255))
         prozor.blit(tekst2, (10, size + 10))
 
     stuck = False
@@ -138,7 +140,7 @@ if shoporgame == "1":
             lines1 = f.readlines()
             value = int(lines1[1]) + int(levels)
             f.close()
-            print(f"Го поминавте левел {value}, отвори пак за следен левел. Добивте 10 парички.")
+            print(f"Го поминавте ниво {value}, отвори пак за следен левел. Добивте 10 парички.")
             f = open("CoinsStore.txt", "r")
             coins += 10
             levels += 1

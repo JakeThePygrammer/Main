@@ -8,3 +8,5 @@ Guide:
     Stuff for my classes(homework, exercises and notes).
 
 Do not touch the .exe files, they are created for unknown reasons.
+
+To create wanted exe files use auto-py-to-exe.

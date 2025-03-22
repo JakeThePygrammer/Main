@@ -1,23 +1,12 @@
 #include <iostream>
 using namespace std;
-int main()
-{
-    int sumof3and5 = 0;
-    int currentnumber = 1;
-    while (currentnumber < 1000){
-        if(currentnumber % 5 == 0){
-            sumof3and5 += currentnumber;
-            currentnumber += 1;
-        }
-        else{
-            if(currentnumber % 3 == 0){
-                sumof3and5 += currentnumber;
-                currentnumber += 1;
-            }
-            else{
-                currentnumber += 1;
-            }
-        }
+int main(){
+    int a = 2;
+    if (a == 1 || a == 2) cout << "\nA = 1 or 2." << endl;
+    else cout << "\nA is not equal to 1 or 2." << endl;
+    int finalnumber = 0;
+    for(int currentnumber = 0; currentnumber < 1000; currentnumber++){ 
+        if(currentnumber % 3 == 0 || currentnumber % 5 == 0) finalnumber += currentnumber; 
     }
-cout << sumof3and5 << endl;
+    cout << "\nThe\nfinal\nnumber\nis:\n" << finalnumber << endl;
 }

@@ -10,7 +10,7 @@ double proba(int stolche, float stolche2, string ime){
     } cout <<endl;
     return (double) stolche * stolche2;
 }
-//Function creation(the start of the function determies the end value type)
+    //Function creation(the start of the function determies the end value type)
 int main(){
     cout << proba(5, 3.5, "abcdefgh") <<endl;
     //Calling self-made function

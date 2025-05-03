@@ -3,7 +3,7 @@
 //Libraries are above this line
 using namespace std;
 
-double proba(int stolche, float stolche2, string ime){
+double proba(int stolche = 1, float stolche2 = 1.1, string ime = "abc"){
     cout << "|";
     for(int i = 0; i < ime.length(); i++){
         cout << ime[i] << "|";
@@ -75,4 +75,5 @@ int main(){
     _= so that you can do the operation by using a specific number
     There are other options such as multiplication and division
     */
+   }
 

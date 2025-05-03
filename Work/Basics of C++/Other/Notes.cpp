@@ -3,7 +3,17 @@
 //Libraries are above this line
 using namespace std;
 
+double proba(int stolche, float stolche2, string ime){
+    cout << "|";
+    for(int i = 0; i < ime.length(); i++){
+        cout << ime[i] << "|";
+    } cout <<endl;
+    return (double) stolche * stolche2;
+}
+//Function creation(the start of the function determies the end value type)
 int main(){
+    cout << proba(5, 3.5, "abcdefgh") <<endl;
+    //Calling self-made function
     string abc = "Input\nsome\ntext:"; //Initialize value
     /*Value types(defaut value if empty is 0)
     String - text(uses "", not '')
@@ -43,12 +53,12 @@ int main(){
     cout << "\nThe\nfinal\nnumber\nis:\n" << finalnumber << endl;
     const int numberconst = 0
     //Using const is useful when you don't want to change a variable after creation.
-    int listing[10] = {10,20,30,40,50};
-    listing[5] = 60;
-    listing[6] = 70;
-    listing[7] = 80;
-    listing[8] = 90;
-    listing[9] = 100;
+    int list1[10] = {10,20,30,40,50};
+    list1[5] = 60;
+    list1[6] = 70;
+    list1[7] = 80;
+    list1[8] = 90;
+    list1[9] = 100;
     //Lists can only have 1 value type, and their values can be declared in 2 ways.
     string t2 = "hello";
     cout << t2.length() << endl;
@@ -65,4 +75,4 @@ int main(){
     _= so that you can do the operation by using a specific number
     There are other options such as multiplication and division
     */
-}
+

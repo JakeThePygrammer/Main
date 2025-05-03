@@ -10,6 +10,7 @@ int main(){
     Char - single character, uses ascii table for values,g + g = 206(we add the ascii values together),(uses '', not "")
     Int - number(using long long increases max size(max is 2^31-1 without long))
     Float/double - decimals(float - 32bit, double - 64bit)
+    Bool - true/false
     We must add a value type or it will not work
     */cout << abc << endl; //Output
     cin >> abc;  //Input
@@ -40,4 +41,28 @@ int main(){
         => - larger than or equal to
     */}
     cout << "\nThe\nfinal\nnumber\nis:\n" << finalnumber << endl;
+    const int numberconst = 0
+    //Using const is useful when you don't want to change a variable after creation.
+    int listing[10] = {10,20,30,40,50};
+    listing[5] = 60;
+    listing[6] = 70;
+    listing[7] = 80;
+    listing[8] = 90;
+    listing[9] = 100;
+    //Lists can only have 1 value type, and their values can be declared in 2 ways.
+    string t2 = "hello";
+    cout << t2.length() << endl;
+    //This gives us the length of the string.
+    getline(cin, t2);
+    //This stops the inout on a new line, not on a space.
+    for (int i = 0; i < 10:i++);
+    /*For cycles work like this:
+    The first space is used for something that is only done at the start of the for(usually to initialize the variable)
+    The second space is used for the condition(like in while or if)
+    The third space is something that runs at the end of every cycle(usually used to add to the variable)
+    Tip : you can use stuff other than ++, such as
+    -- to go down by one
+    _= so that you can do the operation by using a specific number
+    There are other options such as multiplication and division
+    */
 }

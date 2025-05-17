@@ -1,18 +1,19 @@
 #include <iostream> //Preprocessor instructions
 #include <cmath> // For squared
+#include <string> // For string checks
 //Libraries are above this line
 using namespace std;
 
-double proba(int stolche = 1, float stolche2 = 1.1, string ime = "abc"){
+double proba(int stolche = 1, float stolche2 = 1.1, string ime = "abc") {
     cout << "|";
-    for(int i = 0; i < ime.length(); i++){
+    for (int i = 0; i < ime.length(); i++) {
         cout << ime[i] << "|";
-    } cout <<endl;
-    return (double) stolche * stolche2;
+    } cout << endl;
+    return (double)stolche * stolche2;
 }
-    //Function creation(the start of the function determies the end value type)
-int main(){
-    cout << proba(5, 3.5, "abcdefgh") <<endl;
+//Function creation(the start of the function determies the end value type)
+int main() {
+    cout << proba(5, 3.5, "abcdefgh") << endl;
     //Calling self-made function
     string abc = "Input\nsome\ntext:"; //Initialize value
     /*Value types(defaut value if empty is 0)
@@ -39,8 +40,8 @@ int main(){
     if (a == 1 || a == 2) cout << "\nA = 1 or 2." << endl;
     else cout << "\nA is not equal to 1 or 2." << endl;
     int finalnumber = 0;
-    for(int currentnumber = 0; currentnumber < 1000; currentnumber++){ //For loops are useful, they can shorten code.
-        if(currentnumber % 3 == 0 || currentnumber % 5 == 0) finalnumber += currentnumber; //If there is only 1 command, you can do it like this.
+    for (int currentnumber = 0; currentnumber < 1000; currentnumber++) { //For loops are useful, they can shorten code.
+        if (currentnumber % 3 == 0 || currentnumber % 5 == 0) finalnumber += currentnumber; //If there is only 1 command, you can do it like this.
         /*If statement usable operators
         < - smaller than
         > - larger than
@@ -49,11 +50,12 @@ int main(){
         -- - minus 1
         =< - smaller than or equal to
         => - larger than or equal to
-    */}
+    */
+    }
     cout << "\nThe\nfinal\nnumber\nis:\n" << finalnumber << endl;
     const int numberconst = 0
-    //Using const is useful when you don't want to change a variable after creation.
-    int list1[10] = {10,20,30,40,50};
+        //Using const is useful when you don't want to change a variable after creation.
+        int list1[10] = { 10,20,30,40,50 };
     list1[5] = 60;
     list1[6] = 70;
     list1[7] = 80;
@@ -75,5 +77,7 @@ int main(){
     _= so that you can do the operation by using a specific number
     There are other options such as multiplication and division
     */
-   }
-
+    string textchecked = "AbcDef";
+    if(isalpha(textchecked))cout<< "This is text!"<< endl;
+    //String operators are useful for checking text.
+}

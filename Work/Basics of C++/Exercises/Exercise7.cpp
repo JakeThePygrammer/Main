@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-void spacechecker(string text = "defauttest", char input) {
+void spacechecker(string text, char input) {
     int length = text.length();
     for (int i = 0; i < length; i++) {
         if (text[i] == input) {

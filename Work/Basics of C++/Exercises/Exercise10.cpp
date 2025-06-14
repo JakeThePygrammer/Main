@@ -3,20 +3,19 @@
 using namespace std;
 
 int main() {
-    int arr[] = { 13,7,24,74,35,10,6,2,3,1 };
-    int arrsize = 10;
+    int list[] = { 13,7,24,74,35,10,6,2,3,1 };
+    int listsize = 10;
     bool flag = true;
     while (flag) {
         flag = false;
-        for (int i = 0; i < arrsize - 1; i++) {
-            if (arr[i] > arr[i + 1]) {
-                int tempval = arr[i];
-                arr[i] = arr[i + 1];
-                arr[i + 1] = tempval;
+        for (int i = 0; i < listsize - 1; i++) {
+            if (list[i] > list[i + 1]) {
+                int tempval = list[i];
+                list[i] = list[i + 1];
+                list[i + 1] = tempval;
                 flag = true;
             }
         }
     }
-    for (int i = 0; i < arrsize; i++) cout << arr[i] << " ";
-    cout << endl;
+    for (int i = 0; i < listsize; i++) cout << list[i] << " ";
 }

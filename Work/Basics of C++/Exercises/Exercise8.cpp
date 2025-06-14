@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-bool palindrom(int a) {
+bool palindromnum(int a) {
 	int b = 0, n = a;
 
 	while (a > 0) {
@@ -12,13 +12,19 @@ bool palindrom(int a) {
 	return b == n;
 
 }
-int main() {
-	long long int n = 99999999999999999999999999999999999;
-	long long int brojac = 1;
-	for (long long int i = 0; i < n; i++) {
-		if (palindrom(i)) {
-			cout << "Palindrome " << brojac << " : " << i << endl;
-			brojac++;
-		}
-	}
+bool palindromstring(string a) {
+    int stringlength = a.length();
+    for (int i = 0; i < stringlength / 2; i++) {
+        if (a[i] != a[stringlength - i - 1]) {
+            return false;
+        }
+    }
+    return true;
+}
+
+int main(){
+	if (palindromnum(11)) cout << "Num = true" << endl;	
+	else cout << "Num = false" << endl;
+    if (palindromstring("racecars")) cout << "String = true" << endl;
+	else cout << "String = false" << endl;
 }

@@ -53,9 +53,9 @@ int main() {
     */
     }
     cout << "\nThe\nfinal\nnumber\nis:\n" << finalnumber << endl;
-    const int numberconst = 0
-        //Using const is useful when you don't want to change a variable after creation.
-        int list1[10] = { 10,20,30,40,50 };
+    const int numberconst = 0;
+    //Using const is useful when you don't want to change a variable after creation.
+    int list1[10] = { 10,20,30,40,50 };
     list1[5] = 60;
     list1[6] = 70;
     list1[7] = 80;
@@ -67,7 +67,7 @@ int main() {
     //This gives us the length of the string.
     getline(cin, t2);
     //This stops the inout on a new line, not on a space.
-    for (int i = 0; i < 10:i++);
+    for (int i = 0; i < 10; i++);
     /*For cycles work like this:
     The first space is used for something that is only done at the start of the for(usually to initialize the variable)
     The second space is used for the condition(like in while or if)
@@ -78,6 +78,13 @@ int main() {
     There are other options such as multiplication and division
     */
     string textchecked = "AbcDef";
-    if(isalpha(textchecked))cout<< "This is text!"<< endl;
-    //String operators are useful for checking text.
+    if(isalpha('a'))cout<< "This is text!"<< endl;
+    /*String operators are useful for checking text.
+    isalpha() - checks if the string is text
+    isdigit() - checks if the string is a number
+    islower() - checks if the string is lowercase
+    isupper() - checks if the string is uppercase
+    isalnum() - checks if the string is a number or text
+    isspace() - checks if the string is a space
+    */
 }

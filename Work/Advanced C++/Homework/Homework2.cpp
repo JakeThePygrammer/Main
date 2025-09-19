@@ -2,16 +2,15 @@
 using namespace std;
 int main()
 {
-    int lengthoflist, offset;
+    int lengthoflist;
     cout << "Enter the length of the list: "; cin >> lengthoflist;
     int oldlist[lengthoflist], newlist[lengthoflist];
     for(int i = 0; i < lengthoflist; i++){
         cout << "Enter element " << i + 1 << " of the list: ";
         cin >> oldlist[i];
     }
-    cout << "Enter the offset: "; cin >> offset;
     for(int i = 0; i < lengthoflist; i++){
-        int value = i + offset;
+        int value = i + 1;
         if(value >= lengthoflist) value -= lengthoflist;
         newlist[value] = oldlist[i];
     }

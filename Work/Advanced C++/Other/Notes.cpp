@@ -97,3 +97,83 @@ int main() {
         cout<<endl;
     }
 }
+
+//Symmetric matrixes
+
+int A[3][3] = 
+{
+    {1,4,0},
+    {4,-1,1},
+    {0,1,0}
+};
+
+bool isSymmetric = true;
+for(int i=0;i<3;i++){
+    for(int j=0;j<3;j++){
+        if(A[i][j]!=A[j][i]){
+            isSymmetric = false;
+            break;
+        }
+    }
+}
+
+//Multiplying matrixes(transpondent matrixes)
+
+int main(){
+    int rows1=2, columns1 = 3, rows2=3, columns2=2;
+    int A[rows1][columns1] = {
+        {1,2,3},
+        {4,5,6}
+    };
+    int B[rows2][columns2] = {
+        {7,8},
+        {9,10},
+        {11,12}
+    };
+    int C[2][2] = {
+        {0,0},
+        {0,0}
+    };
+    for(int i=0;i<rows1;i++){
+        for(int j=0;j<columns2;j++){
+            for(int k=0;k<columns1;k++){
+                C[i][j] += A[i][k] * B[k][j];
+                //cout << i << " - i " << j << " - j " << k << " - k " << endl;
+                //Use to visualize the for cycles
+            }
+        }
+    }
+    for(int i=0;i<rows1;i++){
+        for(int j=0;j<columns2;j++){
+            cout<<C[i][j]<<" ";
+        }
+        cout<<endl;
+    }
+}
+
+//Switching rows in a matrix
+
+int A[3][3] = 
+{
+    {1,1,1},
+    {2,2,2},
+    {3,3,3}
+};
+for(int i=0;i<3;i++){
+    int temp = A[0][i];
+    A[0][i] = A[2][i];
+    A[2][i] = temp;
+}
+
+//Switching columns in a matrix 
+int A[3][3] = 
+{
+    {1,1,1},
+    {2,2,2},
+    {3,3,3}
+};
+for(int i=0;i<3;i++){
+    int temp = A[i][0];
+    A[i][0] = A[i][2];
+    A[i][2] = temp;
+}

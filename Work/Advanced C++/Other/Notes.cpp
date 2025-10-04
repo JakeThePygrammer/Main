@@ -56,7 +56,7 @@ int main() {
 
 //Upper triangle
 
-for(int i=0: i < red;i++){
+for(int i=0; i < red;i++){
     for(int j=i;j<kol;j++){
         Q[i],[j]
         }

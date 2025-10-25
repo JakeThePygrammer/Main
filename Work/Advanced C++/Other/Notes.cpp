@@ -50,7 +50,7 @@ int main() {
         }
         cout<<endl;
     }
-}
+
 
 //For upper and lower triangle
 
@@ -69,6 +69,8 @@ for(int i=0;i<red;i++){
         Q[i][j]
     }
 }
+}
+
 
 //Combining 2 matrixes
 
@@ -96,7 +98,7 @@ int main() {
         }
         cout<<endl;
     }
-}
+
 
 //Symmetric matrixes
 
@@ -116,7 +118,7 @@ for(int i=0;i<3;i++){
         }
     }
 }
-
+}
 //Multiplying matrixes(transpondent matrixes)
 
 int main(){
@@ -149,7 +151,7 @@ int main(){
         }
         cout<<endl;
     }
-}
+
 
 //Switching rows in a matrix
 
@@ -177,3 +179,153 @@ for(int i=0;i<3;i++){
     A[i][0] = A[i][2];
     A[i][2] = temp;
 }
+}
+
+#include <fstream>
+//REMEMBER-READING WITH IFSTREAM WRITING WITH OFSTREAM
+//Reading with ifstream
+int main(){
+    ifstream vlez;
+    vlez.open("HelloWorld.txt");
+    if(!vlez)
+        cout<<"The file doesnt exist!"<<endl;
+    else
+        cout<<"Successfully opened file.";
+    vlez.close();
+    return 0;
+}
+//Writing with ofstream
+int main(){
+    ofstream izlez;
+    izlez.open("HelloWorld.txt");
+    izlez.close();
+    return 0;
+}
+
+//Reading in file
+int main(){
+    ifstream vlez;
+    vlez.open("HelloWorld.txt");
+    int n;
+    string s;
+    vlez>>n>>s; //to read
+    cout<<s<<endl;
+    vlez.close();
+    return 0;
+}
+
+//Writing to file(deletes whole file data unless during open if you add "ios::app" 'vlez.open("HelloWorld.txt", ios::app'))
+//Ofstream creates files if they don't exist
+
+int main(){
+    ofstream vlez;
+    vlez.open("HelloWorld.txt");
+    vlez<<1; //to write
+    vlez<<" Hello World"<<endl;
+    vlez.close();
+    return 0;
+}
+
+//Writing multiple
+
+int main(){
+    ofstream vlez;
+    vlez.open("HelloWorld.txt");
+    string meseci[12] = {"januari","fevruari","mart","april","maj","juni","juli","avgust","septemvri","oktomvri","noemvri","dekemvri"};
+    for(int i=0;i<=11;i++)
+        vlez<<meseci[i]<<endl;
+    vlez.close();
+    return 0;
+}
+
+/*Fstream is to choose with ios::in and ios::out instead of ifstream and ofstream, to divide multiple use |.
+
+ios:: tags
+ios::in-to read
+ios::out-to wrote
+ios::app-to append
+ios::ate-finds end
+ios::nocreate-only opens file
+ios:noreplace-only creates file
+*/
+int main(){
+    fstream file;
+    file.open("HelloWorld.txt",ios::in);
+    int a,b;
+    file>>a>>b;
+    file.close();
+    cout<<"a + b = " << a+b;
+    file.open("HelloWorld.txt",ios::out|ios::app);
+    file<<endl;
+    file<<a+b<<endl;
+    file.close();
+    return 0;
+
+}
+
+//Functions to use
+
+int main(){
+    ifstream dat("HelloWorld.txt");
+    int sum = 0;
+    if(dat.is_open() == false){
+        cout<<"The file isn't open!";
+        return 0;
+    }
+    while(dat.eof() == false){
+        int temp;
+        dat >> temp;
+
+    if(dat.fail() == true){
+        cout<<"The data given was not a whole number!";
+        return 0;
+    }
+    else
+        sum+=temp;
+    }
+
+    cout<<"The sum is "<<sum<<endl;
+    return 0;
+}
+
+//How to transfer data from one file to another
+
+#include <iostream>
+#include <fstream>
+using namespace std;
+
+int main() {
+    ofstream dava("izlez.txt");
+    ifstream zima("vlez.txt");
+    string tempval;
+    while (!zima.eof()) {
+        getline(zima, tempval);
+        dava << tempval << endl;
+    }
+    dava.close();
+    zima.close();
+    ifstream readtext("izlez.txt");
+    string lines;
+    while (!readtext.eof()) {
+        getline(readtext, lines);
+        cout << lines << endl;
+    }
+    readtext.close();
+    return 0;
+}
+//Functions are like seperate int mains, we can call them like predefined functions
+int Pogolem(int broj1, int broj2){
+    if(broj1 > broj2)return broj1;
+    else return broj2;
+}
+
+int main(){
+    cout<<Pogolem(1,2);
+    int a = Pogolem(6,12);
+    return 0;
+}
+
+/*cmath functions
+sqrt(x,y)-Square root
+pow(x,y)-To the power of
+*/

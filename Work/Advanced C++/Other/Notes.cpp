@@ -329,3 +329,20 @@ int main(){
 sqrt(x,y)-Square root
 pow(x,y)-To the power of
 */
+
+//Getline allows for spaces in input
+//Cin is for the text input, tempval is for the text itself
+int main() {
+    ofstream dava("izlez.txt");
+    string tempval;
+    int amountoflines;
+    cout<<"Enter the amount of lines you want to write to the file: ";
+    cin>>amountoflines;
+    for(int i=0;i<amountoflines;i++){
+        cout<<"Enter name, surname and phone number for line "<<i+1<<": ";
+        getline(cin, tempval);
+        dava<<tempval<<endl;
+    }
+    dava.close();
+    return 0;
+}

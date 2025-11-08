@@ -4,7 +4,7 @@ using namespace std;
 
 class Rectangle {
 private:
-    int x1, y1, x2, y2;
+    int x1, y1, x2, y2, a, b;
     
 
 public:
@@ -14,8 +14,13 @@ public:
         x2 = xx2;
         y2 = yy2;
     }
-    int area(){
-        return abs((x2 - x1) * (y2 - y1));
+    void setAB(int xx1, int yy1, int xx2, int yy2){
+        a = abs(xx2 - xx1);
+        b = abs(yy2 - yy1);
+    }
+    float area(){
+        setAB(x1, y1, x2, y2);
+        return a * b;
     }
     int TopCornerX(){
         return x1;
@@ -40,7 +45,16 @@ public:
 };
 
 int main() {
-    Rectangle rect(1, 4, 4, 1);
+    int x,y,x1,y1;
+    cout << "Enter the top corner x value : ";
+    cin >> x;
+    cout << "Enter the top corner y value : ";
+    cin >> y;
+    cout << "Enter the bottom corner x value : ";
+    cin >> x1;
+    cout << "Enter the bottom corner y value : ";
+    cin >> y1;
+    Rectangle rect(x, y, x1, y1);
     cout<<"Area: "<<rect.area()<<endl;
     return 0;
 }

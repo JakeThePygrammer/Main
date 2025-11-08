@@ -20,5 +20,11 @@
         "streambuf": "cpp",
         "type_traits": "cpp",
         "typeinfo": "cpp"
-    }
+    },
+
+    "github.copilot.enable": {
+   "*": false, 
 }
+    
+}
+

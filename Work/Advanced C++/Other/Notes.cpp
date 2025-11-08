@@ -387,3 +387,59 @@ int main() {
     student3 = {{"Jovana", "Zarki"},15812,1};
     cout<<"Name "<<student3.imeprezime1.ime<<" Index "<<student3.index<<endl;
 }
+
+// Differences between struct and class:
+
+struct PersonS {
+        //always public
+    string nameandsurname;
+    int age;
+};
+
+class PersonC {
+private://private by defaut
+    string nameandsurname;
+    int age;
+    /*
+    Public - can be read without functions
+    Protected - can't be read without functions and can be used in other classes
+    Private - can't be read without functions and can't be used in other classes
+    */
+
+public:
+    // Constructor(can have none, some or all of the variables)
+    PersonC(string name, int a) : nameandsurname(name), age(a) {}
+
+    // Getters
+    string getNameAndSurname() {
+        return nameandsurname;
+    }
+
+    int getAge() {
+        return age;
+    }
+
+    // Setters
+    void setNameAndSurname(string name) {
+        nameandsurname = name;
+    }
+
+    void setAge(int a) {
+        age = a;
+    }
+};
+
+int main() {
+    // Using struct
+    PersonS person1;
+    person1.age = 20;
+    person1.nameandsurname = "Jakov Nestorovski";
+
+    // Using class
+    PersonC person2("Jovan Jovanovski", 22);
+
+    cout << "Struct person: " << person1.nameandsurname/*Can be gotten directly*/ << ", " << person1.age << " years old" << endl;
+    cout << "Class person: " << person2.getNameAndSurname()/*Only can be get with functions*/ << ", " << person2.getAge() << " years old" << endl;
+
+    return 0;
+}

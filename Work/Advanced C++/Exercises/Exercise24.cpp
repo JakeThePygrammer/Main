@@ -1,50 +1,47 @@
 #include <iostream>
+#include <cmath>
 using namespace std;
 
-struct PersonS {
-    string nameandsurname;
-    int age;
-};
-
-class PersonC {
+class Rectangle {
 private:
-    string nameandsurname;
-    int age;
+    int x1, y1, x2, y2;
+    
 
 public:
-    // Constructor
-    PersonC(string name, int a) : nameandsurname(name), age(a) {}
-
-    // Getters
-    string getNameAndSurname() {
-        return nameandsurname;
+    Rectangle(int xx1, int yy1, int xx2, int yy2){
+        x1 = xx1;
+        y1 = yy1;
+        x2 = xx2;
+        y2 = yy2;
     }
-
-    int getAge() {
-        return age;
+    int area(){
+        return abs((x2 - x1) * (y2 - y1));
     }
-
-    // Setters
-    void setNameAndSurname(string name) {
-        nameandsurname = name;
+    int TopCornerX(){
+        return x1;
     }
-
-    void setAge(int a) {
-        age = a;
+    int TopCornerY(){
+        return y1;
+    }
+    int BottomCornerX(){
+        return x2;
+    }
+    int BottomCornerY(){
+        return y2;
+    }
+    void topcornerchange(int newx1, int newy1){
+        x1 = newx1;
+        y1 = newy1;
+    }
+    void bottomcornerchange(int newx2, int newy2){
+        x2 = newx2;
+        y2 = newy2;
     }
 };
 
 int main() {
-    // Using struct
-    PersonS person1;
-    person1.age = 20;
-    person1.nameandsurname = "Jakov Nestorovski";
-
-    // Using class
-    PersonC person2("Jovan Jovanovski", 22);
-
-    cout << "Struct person: " << person1.nameandsurname << ", " << person1.age << " years old" << endl;
-    cout << "Class person: " << person2.getNameAndSurname() << ", " << person2.getAge() << " years old" << endl;
-
+    Rectangle rect(1, 4, 4, 1);
+    cout<<"Area: "<<rect.area()<<endl;
     return 0;
 }
+

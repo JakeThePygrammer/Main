@@ -66,10 +66,9 @@ int main() {
     cout << "Enter the first z value : ";
     cin >> z1;
     cout << "Enter the second z value : ";
-    cin >> z1;
-    Rectangularprism rect(x, x1, y, y1, z1, z2);
+    cin >> z2;
+    Rectangularprism rect(x, y, x1, y1, z1, z2);
     cout<<"Area: "<<rect.area()<<endl;
     cout<<"Volume: "<<rect.volume()<<endl;
     return 0;
 }
-

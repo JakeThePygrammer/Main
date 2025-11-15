@@ -2,12 +2,13 @@
 #include <string>
 using namespace std;
 
-struct Book {
+class Book {
+private:
     string bookname;
     string author;
     int ISBN;
     int price;
-
+public:
     void replacer(string bookname1, string author1, int ISBN1, int price1) {
         bookname = bookname1;
         author = author1;

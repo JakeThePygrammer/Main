@@ -9,7 +9,25 @@ private:
     int ISBN;
     int price;
 public:
-    
+    Book(){
+        bookname = "";
+        author = "";
+        ISBN = 0;
+        price = 0;
+    }
+    void replacer(string bookname1, string author1, int ISBN1, int price1) {
+        bookname = bookname1;
+        author = author1;
+        ISBN = ISBN1;
+        price = price1;
+    }
+
+    void printer() {
+        cout << "ISBN: " << ISBN << endl;
+        cout << bookname << " by " << author << endl;
+        cout << "Price: " << price << endl;
+    }
+
 };
 
 int main() {
@@ -28,11 +46,8 @@ int main() {
     cout << "Enter the ISBN for the book " << ": ";
     cin >> ISBNs;
     cin.ignore();
-
-    books.bookname = booknames;
-    books.price = prices;
-    books.author = authors;
-    books.ISBN = ISBNs;
-    cout << books.bookname << " by " << books.author << " ISBN : " << books.ISBN << " Price : " << books.price << endl;
+    
+    books.replacer(booknames, authors, ISBNs, prices);
+    books.printer();
     return 0;
 }

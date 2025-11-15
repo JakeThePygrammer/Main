@@ -401,9 +401,9 @@ private://private by defaut
     string nameandsurname;
     int age;
     /*
-    Public - can be read without functions
-    Protected - can't be read without functions and can be used in other classes
-    Private - can't be read without functions and can't be used in other classes
+    Public - can be read without functions                                       Yes Yes
+    Protected - can't be read without functions and can be used in other classes  No Yes
+    Private - can't be read without functions and can't be used in other classes  No No
     */
 
 public:
@@ -441,5 +441,41 @@ int main() {
     cout << "Struct person: " << person1.nameandsurname/*Can be gotten directly*/ << ", " << person1.age << " years old" << endl;
     cout << "Class person: " << person2.getNameAndSurname()/*Only can be get with functions*/ << ", " << person2.getAge() << " years old" << endl;
 
+    return 0;
+}
+
+//Example for child classes
+
+class Person {
+protected:
+    string name;
+    int age;
+
+public:
+    Person(string n, int a) : name(n), age(a) {}
+
+    void displayInfo() {
+        cout << "Name: " << name << ", Age: " << age << "\n";
+    }
+};
+
+// Derived (child) class
+class Student : public Person {
+private:
+    string studentID;
+
+public:
+    Student(string n, int a, string id)
+        : Person(n, a), studentID(id) {}
+
+    void displayStudent() {
+        displayInfo(); // Call base class method
+        cout << "Student ID: " << studentID << "\n";
+    }
+};
+
+int main() {
+    Student s("Alice", 20, "S12345");
+    s.displayStudent();
     return 0;
 }

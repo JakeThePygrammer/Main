@@ -240,7 +240,7 @@ int main(){
 
 /*Fstream is to choose with ios::in and ios::out instead of ifstream and ofstream, to divide multiple use |.
 
-ios:: tags
+ios::-tags
 ios::in-to read
 ios::out-to wrote
 ios::app-to append
@@ -444,38 +444,4 @@ int main() {
     return 0;
 }
 
-//Example for child classes
-
-class Person {
-protected:
-    string name;
-    int age;
-
-public:
-    Person(string n, int a) : name(n), age(a) {}
-
-    void displayInfo() {
-        cout << "Name: " << name << ", Age: " << age << "\n";
-    }
-};
-
-// Derived (child) class
-class Student : public Person {
-private:
-    string studentID;
-
-public:
-    Student(string n, int a, string id)
-        : Person(n, a), studentID(id) {}
-
-    void displayStudent() {
-        displayInfo(); // Call base class method
-        cout << "Student ID: " << studentID << "\n";
-    }
-};
-
-int main() {
-    Student s("Alice", 20, "S12345");
-    s.displayStudent();
-    return 0;
-}
+//REMEMBER - USE PROTECTED WHEN MAKING CHILD ATTRIBUTES WITH CLASSES!!!

@@ -10,7 +10,7 @@ def realnotscamindia2012(a):
         print("KArtica nne..f. no ecept plse trai gaians oles")
 
 
-for index in range(999):
+while True:
     print("Would you like to sign up for free pHd 2024 real not skam?")
     print("ur nam:deez nuts")
     a = input("Entr numero on da karticka plese ")

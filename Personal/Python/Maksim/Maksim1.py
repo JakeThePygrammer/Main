@@ -10,7 +10,7 @@ def realnotscamindia2012(a):
     else:
         print("KArtica nne..f. no ecept plse trai gaians oles")
 
-for index in range(999):
+while True:
     a = input("Entr numero on da karticka plese ")
     if a == "end":
         break

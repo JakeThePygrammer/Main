@@ -1,1 +1,1 @@
-print("Zdravo! Jas se vikam Jakov i jas imam 13 godini.")
+print("Hello! My name is Jakov and im 13 years old!")

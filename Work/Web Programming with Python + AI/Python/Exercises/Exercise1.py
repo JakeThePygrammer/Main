@@ -1,0 +1,1 @@
+print("Zdravo! Jas se vikam Jakov i jas imam 13 godini.")

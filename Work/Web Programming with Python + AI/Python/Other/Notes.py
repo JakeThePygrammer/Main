@@ -24,6 +24,7 @@ print(f"The variable type is equal to {type(integertype)}") #Checks the type of 
 print(f"The variable type is integer? {isinstance(integertype, int)}")
 
 #In inputs with math, remember to change the value types to int, or use float for decimals
+#There exist other operators such as str to turn into string
 #Operators for math
 # / - division returns float
 # //- division returns integer(removes the decimal part)
@@ -83,3 +84,36 @@ print(text[1:3]) #prints bc
 print(text[:3]) #prints abc
 print(text[4:]) #prints from d to end
 print(text[::-1])#prints reverse
+
+#Use round(number, decimals) to round a number.
+
+print(round(123.123, 2)) #returns 123.12
+
+#Lists are variables with multiple items.
+#Unlike C++, these lists can include different types of elements, and can always be changed.
+#Using indexes is same as in strings
+#Methods
+#append(element) - adds new element at end
+#insert(index) - inserts element at set location
+#remove(element) - removes first occurrence of given element
+#pop(index) - removes element at set location
+#sort() - sorts with key
+#len(list) - gives list length
+#count(element) - counts the amount of a character or word in the list
+#index(element) - gives the index of the first occurrence of the element, takes start - end args
+#clear() - clears list
+#reverse() - reverses list
+#extend(list) - extends a list by adding another one to it
+
+list = [0,1,2,3,4,5,6,7,8,9]
+print(list) #prints [0,1,2,3,4,5,6,7,8,9]
+list.append(10)
+print(list) #prints [0,1,2,3,4,5,6,7,8,9,10]
+list.remove(10)
+print(list) #prints [0,1,2,3,4,5,6,7,8,9]
+list.pop(0)
+print(list) #prints [1,2,3,4,5,6,7,8,9]
+list.reverse()
+print(list) #prints [9,8,7,6,5,4,3,2,1]
+
+#Tuples

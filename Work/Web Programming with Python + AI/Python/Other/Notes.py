@@ -1,4 +1,5 @@
 #When printing, you can use either " or ', but make sure that if you start with one, you finish with it too.
+from sqlalchemy import true
 
 print("Hello World")
 print('Hi again!')
@@ -58,6 +59,7 @@ print(f"The total of your numbers is : {total}")
 #strip() - removes start and end spaces
 #replace() - replaces something with something else(in parentheses put "chartoreplace", "charreplaced"
 #len() - returns length of string(put variable in parentheses)
+#split() - splits strings at the location of points
 #Check exercises 4 - 8 for use cases
 
 text = "abc def ghi"
@@ -105,6 +107,7 @@ print(round(123.123, 2)) #returns 123.12
 #reverse() - reverses list
 #extend(list) - extends a list by adding another one to it
 #Multiplying lists multiplies the elements
+#element in list - returns true/false depending on if the element is in the list
 #Check exercises 12-14 for use cases
 
 list = [0,1,2,3,4,5,6,7,8,9]
@@ -117,3 +120,75 @@ list.pop(0)
 print(list) #prints [1,2,3,4,5,6,7,8,9]
 list.reverse()
 print(list) #prints [9,8,7,6,5,4,3,2,1]
+
+#Tuples are similar to lists, but the elements can't be changed.
+#Methods
+#count(element) - counts the amount of a character or word in the tuple
+#index(element) - gives the index of the first occurrence of the element, takes start - end args
+#element in tuple - returns true/false depending on if the element is in the tuple
+#Best for use in expected things such as days of the week
+#Check exercise 17 for use case
+
+tuple = (10,"a",True)
+print(tuple)
+
+#Sets have no indexes and no duplicates, albeit you can add and remove items.
+#Methods
+#add(element) - adds element at end
+#remove(element) - removes element at end
+#element in set - returns true/false depending on if the element is in the set
+# a | b - this returns all elements in both with no duplicates
+# a & b - this returns what is in both a and b
+# a - b - this returns what is in a and not in b
+
+A = {1, 2, 3, 4}
+B = {3, 4, 5, 6}
+
+print(A | B) # returns {1,2,3,4,5,6}
+print(A & B) # returns {3,4}
+print(A - B) # returns {1,2}
+
+#Dictionaries have 2 value sets - keys and values
+#The keys act as indexes
+#You cannot have double keys
+#dictionary[key] = element - add new values if new key, changes if key already exists
+#pop(key) - removes element
+#del dictionary[key] - removes element
+#keys() - just the keys
+#values() - just the values
+#items() - returns pairs as tuple
+#zip(list, list) - returns dictionary from 2 lists, add dict type marker
+
+dictionary = {1:"A",2:"B",3:"C",4:"D",5:"E"}
+print(dictionary)
+print(dictionary[1]) #1 is a key, not an index
+print(dictionary.keys())
+print(dictionary.values())
+print(dictionary.items())
+dictionary2 = dict(zip(["A", "B", "C"],[1,2,3]))
+print(dictionary2)
+
+#Once one is true, it exists the condition check, so watch out for the order of the statements
+#if checks for true or false for a specific statement and runs if true
+#elif for multiple conditions for different code
+#else if all else fails
+#Operators
+#== - equal to
+#!= - not equal to
+#>= - greater or equal to
+#<= - smaller or equal to
+#> - larger than
+#< - smaller than
+#and/or - for multiple conditions for the same code
+#Check exercises 15-
+
+a = int(input("Enter a number: "))
+if a == 1:
+    print("The number is equal to 1")
+elif a == 2:
+    print("The number is equal to 2")
+else:
+    print("The number is not equal to 1 or 2")
+
+
+

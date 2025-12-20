@@ -104,6 +104,7 @@ print(round(123.123, 2)) #returns 123.12
 #clear() - clears list
 #reverse() - reverses list
 #extend(list) - extends a list by adding another one to it
+#Multiplying lists multiplies the elements
 #Check exercises 12-14 for use cases
 
 list = [0,1,2,3,4,5,6,7,8,9]

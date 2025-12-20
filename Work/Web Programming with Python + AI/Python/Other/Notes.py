@@ -104,6 +104,7 @@ print(round(123.123, 2)) #returns 123.12
 #clear() - clears list
 #reverse() - reverses list
 #extend(list) - extends a list by adding another one to it
+#Check exercises 12-14 for use cases
 
 list = [0,1,2,3,4,5,6,7,8,9]
 print(list) #prints [0,1,2,3,4,5,6,7,8,9]
@@ -115,5 +116,3 @@ list.pop(0)
 print(list) #prints [1,2,3,4,5,6,7,8,9]
 list.reverse()
 print(list) #prints [9,8,7,6,5,4,3,2,1]
-
-#Tuples

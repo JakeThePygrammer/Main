@@ -59,7 +59,7 @@ print(f"The total of your numbers is : {total}")
 #replace() - replaces something with something else(in parentheses put "chartoreplace", "charreplaced"
 #len() - returns length of string(put variable in parentheses)
 #split() - splits strings at the location of points
-#Check exercises 4 - 8 for use cases
+#Check exercises 4 - 8 and 18-19 for use cases
 
 text = "abc def ghi"
 count_a = text.count("a")
@@ -105,8 +105,8 @@ print(round(123.123, 2)) #returns 123.12
 #clear() - clears list
 #reverse() - reverses list
 #extend(list) - extends a list by adding another one to it
-#Multiplying lists multiplies the elements
-#element in list - returns true/false depending on if the element is in the list
+#Multiplying lists multiplies adds the whole list onto itself
+#element not in/in list - returns true/false depending on if the element is/isn't in the list
 #Check exercises 12-14 for use cases
 
 list = [0,1,2,3,4,5,6,7,8,9]
@@ -124,7 +124,7 @@ print(list) #prints [9,8,7,6,5,4,3,2,1]
 #Methods
 #count(element) - counts the amount of a character or word in the tuple
 #index(element) - gives the index of the first occurrence of the element, takes start - end args
-#element in tuple - returns true/false depending on if the element is in the tuple
+#element not in/in tuple - returns true/false depending on if the element is/isn't in the tuple
 #Best for use in expected things such as days of the week
 #Check exercise 17 for use case
 
@@ -135,7 +135,7 @@ print(tuple)
 #Methods
 #add(element) - adds element at end
 #remove(element) - removes element at end
-#element in set - returns true/false depending on if the element is in the set
+#element not in/in set - returns true/false depending on if the element is/isn't in the set
 # a | b - this returns all elements in both with no duplicates
 # a & b - this returns what is in both a and b
 # a - b - this returns what is in a and not in b
@@ -157,6 +157,7 @@ print(A - B) # returns {1,2}
 #values() - just the values
 #items() - returns pairs as tuple
 #zip(list, list) - returns dictionary from 2 lists, add dict type marker
+#element not in/in dictionary - returns true/false depending on if the element is/isn't in the dictionary
 
 dictionary = {1:"A",2:"B",3:"C",4:"D",5:"E"}
 print(dictionary)
@@ -179,7 +180,9 @@ print(dictionary2)
 #> - larger than
 #< - smaller than
 #and/or - for multiple conditions for the same code
-#Check exercises 15-
+#element not in/in list/tuple/dictionary - returns true/false depending on if the element is/isn't in the list/tuple/dictionary
+#pass - place after if/elif/else to not run anything
+#Check exercises 15-17 and exercises 20-
 
 a = int(input("Enter a number: "))
 if a == 1:
@@ -189,5 +192,11 @@ elif a == 2:
 else:
     print("The number is not equal to 1 or 2")
 
+#Cycles are for running the same code multiple times, there are multiple times
+#You can do it with lists/tuples/dictionaries/strings written like this
+#for element in list/tuple/dictionary/string:
+#The element is the current one selected, so printing element would return the element at the position of what cycle the for cycle is on
+#Another way is using index in range(numbers)
+#This uses the same index rules as strings except if you only enter one number it would be considered as the end(start, stop, step)
 
 

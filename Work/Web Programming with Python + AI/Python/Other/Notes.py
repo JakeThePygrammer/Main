@@ -3,7 +3,7 @@
 print("Hello World")
 print('Hi again!')
 
-#Empty variables dont exist, but variable types don't need to be defined. From symbols you can only use underscore(_).
+#Empty variables don't exist, but variable types don't need to be defined. From symbols, you can only use underscore(_).
 
 integertype = 1 #Whole numbers only
 floattype = 1.0 #Allows for use of decimals
@@ -63,7 +63,7 @@ print(f"The total of your numbers is : {total}")
 
 text = "abc def ghi"
 count_a = text.count("a")
-count_a = text.lower().count("a") #Returns 1, lower can be removed, but better for accuracy
+count_a_lower = text.lower().count("a") #Returns 1, lower can be removed, but better for accuracy
 title_a = text.title()            #Returns "Abc Def Ghi"
 
 #In strings, all characters have indexes.
@@ -182,7 +182,7 @@ print(dictionary2)
 #and/or - for multiple conditions for the same code
 #element not in/in list/tuple/dictionary - returns true/false depending on if the element is/isn't in the list/tuple/dictionary
 #pass - place after if/elif/else to not run anything
-#Check exercises 15-17 and exercises 20-
+#Check exercises 15-17 and exercises 20-27(excluding 24)
 
 a = int(input("Enter a number: "))
 if a == 1:
@@ -192,11 +192,23 @@ elif a == 2:
 else:
     print("The number is not equal to 1 or 2")
 
-#Cycles are for running the same code multiple times, there are multiple times
+#Cycles are for running the same code multiple times, there are multiple types
+#Use break to finish the cycle and continue to move to the next repetition
 #You can do it with lists/tuples/dictionaries/strings written like this
 #for element in list/tuple/dictionary/string:
 #The element is the current one selected, so printing element would return the element at the position of what cycle the for cycle is on
 #Another way is using index in range(numbers)
 #This uses the same index rules as strings except if you only enter one number it would be considered as the end(start, stop, step)
+#Check exercises 20-28 for use cases
+
+for index in range(1,11):
+    print(index)
+
+#While cycles use an if statement to keep the cycle running
+#While it's true, the cycle keeps running
+#Since there are no indexes, you can use counters to know what cycle you're on.
+#Use While True for an infinite cycle
+#Use switches when there is more code
+#Check exercises 30- for use cases
 
 

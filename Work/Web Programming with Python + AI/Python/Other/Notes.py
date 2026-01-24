@@ -209,6 +209,24 @@ for index in range(1,11):
 #Since there are no indexes, you can use counters to know what cycle you're on.
 #Use While True for an infinite cycle
 #Use switches when there is more code
-#Check exercises 30- for use cases
+#Check exercises 30-33 for use cases
+
+i = 0
+while i <= 10:
+    print(i)
+    i += 1
+
+#Functions are useful for calling predefined code. There are two types.
+#Predefined functions are functions that are already built into python(print(), len()...).
+#User-defined functions are functions that you create yourself.
+#Use return to return the same as predefined functions, but print can be used too.
+#Functions can exist without return and arguments, but without return, functions cannot be defined to a value(value will be None).
+#Check exercises 34-37 for use cases.
+
+def functionName(arg1, arg2):
+    return(arg1 + arg2)
+print(f"Function result: {functionName(1, 2)}")
+a = functionName(2, 2) #Value-defined function
+
 
 

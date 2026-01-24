@@ -1,10 +1,9 @@
 #When printing, you can use either " or ', but make sure that if you start with one, you finish with it too.
-from sqlalchemy import true
 
 print("Hello World")
 print('Hi again!')
 
-#Empty variables dont exist, but variable types don't need to be defined. From symbols you can only use underscore(_).
+#Empty variables dont exist, but variable types don't need to be defined. From symbols, you can only use underscore(_).
 
 integertype = 1 #Whole numbers only
 floattype = 1.0 #Allows for use of decimals
@@ -64,7 +63,7 @@ print(f"The total of your numbers is : {total}")
 
 text = "abc def ghi"
 count_a = text.count("a")
-count_a = text.lower().count("a") #Returns 1, lower can be removed, but better for accuracy
+count_a_lower = text.lower().count("a") #Returns 1, lower can be removed, but better for accuracy
 title_a = text.title()            #Returns "Abc Def Ghi"
 
 #In strings, all characters have indexes.
@@ -180,7 +179,7 @@ print(dictionary2)
 #> - larger than
 #< - smaller than
 #and/or - for multiple conditions for the same code
-#Check exercises 15-
+#Check exercises 15-17
 
 a = int(input("Enter a number: "))
 if a == 1:
@@ -190,5 +189,14 @@ elif a == 2:
 else:
     print("The number is not equal to 1 or 2")
 
+#Functions are useful for calling predefined code. There are two types.
+#Predefined functions are functions that are already built into python(print(), len()...).
+#User-defined functions are functions that you create yourself.
+#Use return to return the same as predefined functions, but print can be used too.
+#Functions can exist without return and arguments, but without return, functions cannot be defined to a value(value will be None).
 
+def functionName(arg1, arg2):
+    return(arg1 + arg2)
+print(f"Function result: {functionName(1, 2)}")
+a = functionName(2, 2) #Value-defined function
 

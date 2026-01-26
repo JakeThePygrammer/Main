@@ -56,9 +56,10 @@ print(f"The total of your numbers is : {total}")
 #islower() - checks if all lower(ignores special)
 #isupper() - checks if all upper(ignores special)
 #strip() - removes start and end spaces
-#replace() - replaces something with something else(in parentheses put "chartoreplace", "charreplaced"
+#replace() - replaces something with something else(in parentheses put "chartoreplace", "charreplaced")
 #len() - returns length of string(put variable in parentheses)
 #split() - splits strings at the location of points
+#, end == " " - allows for no insertion of new row when printing.
 #Check exercises 4 - 8 and 18-19 for use cases
 
 text = "abc def ghi"
@@ -221,12 +222,46 @@ while i <= 10:
 #User-defined functions are functions that you create yourself.
 #Use return to return the same as predefined functions, but print can be used too.
 #Functions can exist without return and arguments, but without return, functions cannot be defined to a value(value will be None).
-#Check exercises 34-37 for use cases.
+#Check exercises 34-43 for use cases.
+#Defaut arguments can be set to making inserting items optional.
 
-def functionName(arg1, arg2):
+def functionName(arg1, arg2 = 1):
     return(arg1 + arg2)
 print(f"Function result: {functionName(1, 2)}")
 a = functionName(2, 2) #Value-defined function
 
+#Keyword arguments are used for setting which parameter is for which value.
+#This is useful in cases with default values.
 
+def greeting(name, surname):
+    print(f"Name = {name} Surname = {surname}.")
+
+greeting(name = "Angela", surname = "Simonova")
+
+#Docstrings are quick explanations of functions. Useful in multi-developer environments.
+
+def greeting(name, surname):
+    """
+    :param name: name of user
+    :param surname: surname of user
+    :return: nothing
+    this function isn't very important
+    :D
+
+    """
+    print(f"Name = {name} Surname = {surname}.")
+
+greeting(name = "Angela", surname = "Simonova")
+
+#Multiple values can be returned using commas.
+
+def calculations(a, b, ):
+    return a + b, a - b
+answer = calculations(1, 2) #Tuple
+a1, a2 = calculations(1, 2) #2 values
+
+#Lambda functions can run only one command, but can have infinite arguments.
+
+x = lambda a, b: a + b #x is function name, then come the arguments, and finally the command.
+print(f"Result{x(5,6)}")
 

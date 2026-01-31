@@ -263,5 +263,33 @@ a1, a2 = calculations(1, 2) #2 values
 #Lambda functions can run only one command, but can have infinite arguments.
 
 x = lambda a, b: a + b #x is function name, then come the arguments, and finally the command.
-print(f"Result{x(5,6)}")
+print(f"The result is {x(5,6)}")
+
+#Files store data.
+#open(filename, mode) - opens a file.
+#read(characteramount) - reads file.
+#readline() - reads specific file line.
+#readlines() - reads all file lines and puts them in list.
+#You can use "for x in file" in for cycles.
+#write("text") - adds to the end of the file.
+#Modes:
+#r - Read - opens file for reading. Cannot create new files.
+#a - Append - opens a file for changes, creates new if file doesn't exist.
+#w - Write - clears file for changes, creates new if file doesn't exist.
+#x - Create - creates new file, error if already exists.
+#Check exercises 48-XX for use cases
+
+file = open("../Text files/NotesText.txt", "w")
+for index in range(10):
+    file.write(f"{input("Enter a number for the file : ")}\n")
+file.close()
+
+total1 = 0
+filer = open("../Text files/NotesText.txt", "r")
+filelist = filer.readlines()
+for line in filelist:
+    print(line, end="")
+    total1 += int(line)
+print(f"\nThe total of all the numbers in the file is : {total1}")
+filer.close()
 

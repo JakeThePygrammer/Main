@@ -1,3 +1,16 @@
+#Use import to import modules. You can also use from module import function for a specific function.
+#Modules to use : math, random(random.choice/s for random letter), string(use list type with ascii)
+
+a = 0
+import random
+while a != 100:
+    a = random.randrange(0, 101, 5)
+    print(a)
+
+list = [0,1,2,3,4,5,6,7,8,9]
+for index in range(len(list)):
+    print(random.choices(list, weights=[10, 10, 10, 10, 10, 10, 10, 10, 10, 10], k=1)) #Weights - chance to pick that item. k - how many items to pick.
+
 #When printing, you can use either " or ', but make sure that if you start with one, you finish with it too.
 
 print("Hello World")

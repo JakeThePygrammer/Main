@@ -1,8 +1,10 @@
 #Use import to import modules. You can also use from module import function for a specific function.
-#Modules to use : math, random(random.choice/s for random letter), string(use list type with ascii)
+#Modules to use : math, random(random.choice/s for random letter), string(use list type with ascii), requests
+
+import random
+import requests
 
 a = 0
-import random
 while a != 100:
     a = random.randrange(0, 101, 5)
     print(a)
@@ -313,3 +315,30 @@ filer.close()
 #random.randrange(start, stop, step) - picks a random number from the range, and the step can make it only those that are start + step
 
 print(f"\n Random number from 1-5 : {random.randint(1, 5)}")
+
+#API's (application programming interface) allows your program communicate with other applications/servers.
+#HTTP methods:
+#get - fetches existing data
+#request - requests with method
+#post - creates new data
+#delete - deletes data
+#put, patch - updating data
+#HTTP response returns 3 things
+#status line - whether the request was successful
+    #HTTP version
+    #status code
+    #status message
+#HTTP headers - general info
+    #date
+    #server
+    #content type
+#message body - information that we want
+    #dictionary
+#We will use the requests module for work with API's.
+
+url = "https://catfact.ninja/fact"
+response = requests.get(url)
+print(response.status_code)
+print(response.text) #This is a string, not a dictionary.
+print(response.json()) #This is a dictionary.
+print(response.json()["fact"]) #How to get a specific key from the json file.

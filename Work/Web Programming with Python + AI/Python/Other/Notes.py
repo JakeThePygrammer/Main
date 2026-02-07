@@ -306,3 +306,10 @@ for line in filelist:
 print(f"\nThe total of all the numbers in the file is : {total1}")
 filer.close()
 
+#Random functions are useful for generating/shuffling items:
+#random.randint(start, stop) - generates a random number in the range.
+#random.shuffle(list) - shuffles elements in a list.
+#random.choices(list, weights, k = num) - picks a random element from a list. Weights can make elements appear more, and k is how many elements to output.
+#random.randrange(start, stop, step) - picks a random number from the range, and the step can make it only those that are start + step
+
+print(f"\n Random number from 1-5 : {random.randint(1, 5)}")

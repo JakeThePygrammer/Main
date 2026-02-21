@@ -18,12 +18,18 @@
 <!--This adds a new row.-->
 <!--Paragraph text goes with these tags.-->
 <p><b>Bold text.</b></p>
+<p><strong>Bold text.</strong></p>
 <p><i>Italics text.</i></p>
+<p><em>Italics text.</em></p>
 <!--Bold and italics tags.-->
 <a href="https://semosedu.mk/"> Sign up!</a>
 <!--Links are with these tags.-->
+<br>
+<br>
 <a href="Test.html"> Test file.</a>
 <!--Hyperlinks allow for local access too.-->
+<br>
+<br>
 <hr>
 <!--This adds a line.-->
 <h4>We study : </h4>
@@ -45,7 +51,91 @@
     <li>SQL</li>
     <li>Flask</li>
 </ul>
+<br>
+<!--This adds empty space.-->
+<ol type="I">
+    <!--This is a custom list.-->
+    <li>Python</li>
+    <li>CSS</li>
+    <li>HTMl</li>
+    <li>SQL</li>
+    <li>Flask</li>
+</ol>
+<br>
 <img src="https://eduwebcoorporatemk.blob.core.windows.net/edu-mk/2025/07/semos-new-logo-color-6870e2074ee98.png" alt="Semos education brand logo.">
 <!--This is an image with alt text if it is missing. You can use local files or web links. Has extra arguments - width and height.-->
+<br>
+<br>
+<hr>
+<br>
+<table border="3"> <!--Border defines the table thickness, not available on some browsers.-->
+    <tr> <!--Row 1 initialization-->
+        <th>Name</th> <!--Headers-->
+        <th>Age</th>
+        <th>Municipality</th>
+    </tr>
+    <tr> <!--Row 2 initialization-->
+        <td>Jakov</td> <!--Text-->
+        <td>13</td>
+        <td>Aerodrom</td>
+    </tr>
+    <tr> <!--Row 3 initialization-->
+        <td>Andrea</td> <!--Test-->
+        <td>16</td>
+        <td>Karpos</td>
+    </tr>
+</table>
+<!--Inputting text-->
+<form>
+    <!--Name, value, for and id are for later when we begin frontend-backend connection-->
+    <br>
+    <label>Input : </label> <!--The name before the field-->
+    <input type="text" name="text1"> <!--Text type shows the text-->
+    <br>
+    <br>
+    <label>Input secret : </label>
+    <input type="password" name="text2"> <!--Password type doesn't show the text-->
+    <br>
+    <br>
+    <label>Enter a comment : </label>
+    <textarea name="Enter a comment : " rows="3" cols="30"></textarea> <!--Allows for longer text-->
+    <br>
+    <br>
+    <label>Choose your city : </label>
+    <select name="city"> <!--Creates a dropdown menu-->
+        <option value="skopje">Skopje</option>
+        <option value="veles">Veles</option>
+        <option value="bitola">Bitola</option>
+        <option value="kumanovo">Kumanovo</option>
+    </select>
+    <br>
+    <br>
+    <br>
+    <label>Choose your vehicle : </label>
+    <br>
+    <input type="checkbox" id="vehicle1" name="a" value="Bike"> <!-- Checkboxes, multiple can be selected-->
+    <label for="vehicle1"> I have a bike </label><br>
+    <input type="checkbox" id="vehicle2" name="a" value="Car">
+    <label for="vehicle2"> I have a car </label><br>
+    <input type="checkbox" id="vehicle3" name="a" value="Boat">
+    <label for="vehicle3"> I have a boat </label><br>
+    <br>
+    <label>Choose your favorite language : </label>
+    <br>
+    <input type="radio" id="html" name="fav_language" value="HTML"> <!--Allows for the selection of only one option-->
+    <label for="html">HTML</label><br>
+    <input type="radio" id="css" name="fav_language" value="CSS">
+    <label for="css">CSS</label><br>
+    <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+    <label for="javascript">JavaScript</label>
+    <br>
+    <br>
+    <label for="doe">Date of enrollment :</label>
+    <input type="date" id="doe" name="doe1"> <!-- Allows for date input-->
+    <br>
+    <br>
+    <button>Submit</button> <!--Submit button-->
+</form>
+<!--WRITE NOTES FOR SEMANTICS!!!-->
 </body>
 </html>

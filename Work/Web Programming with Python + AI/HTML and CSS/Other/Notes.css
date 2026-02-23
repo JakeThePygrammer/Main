@@ -33,7 +33,7 @@ h1+p{
     text-align: center; /*Aligns text*/
     text-transform: uppercase; /*Turns text to uppercase*/
     text-decoration: underline; /*Adds underline to text*/
-    line-height: 10; /*Increases space between lines*/
+    line-height: 4; /*Increases space between lines*/
 }
 body{
     background: linear-gradient(white, gray); /*We can add gradients to the background*/

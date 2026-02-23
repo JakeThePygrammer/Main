@@ -1,0 +1,21 @@
+#divimg{
+    border-radius: 25px;
+    background-image: url("https://th.bing.com/th/id/OIP.La0j2ocnC6F4l_pFUpTS1wHaEJ?w=277&h=180&c=7&r=0&o=7&dpr=2&pid=1.7&rm=3");
+    width: 400px;
+    height: 250px;
+}
+
+button{
+    border-radius: 5px;
+    background-color: #397deb;
+}
+
+button:hover{
+    background-color: rgba(109, 150, 225, 0.95);
+    scale: 1.05;
+}
+
+button:active{
+    background-color: #000000;
+
+}

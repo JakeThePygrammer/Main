@@ -1,0 +1,45 @@
+h1, h2, h3, h4, h5, h6 {
+    color: orange; /*This changes the style for headers 1-6*/
+    border:2px dotted salmon;/*We can add borders too, with different attributes*/
+}
+li{
+    color: red;
+    border:2px double greenyellow;/*This changes the style for list items*/
+}
+
+.aaa {
+    color: green;/*This changes the style for items in class .aaa*/
+    border:2px solid salmon
+}
+
+#CSS1 {
+    color: darkblue; /*This changes the style for items with id CSS1*/
+    border:2px dashed greenyellow;
+}
+
+div > p{
+    color: turquoise; /*This only selects first children*/
+}
+
+div p{
+    color: darkgoldenrod; /*This selects all children*/
+}
+
+h1+p{
+    color: saddlebrown; /*This selects all paragraphs that are after headers*/
+}
+
+#top{
+    text-align: center; /*Aligns text*/
+    text-transform: uppercase; /*Turns text to uppercase*/
+    text-decoration: underline; /*Adds underline to text*/
+    line-height: 10; /*Increases space between lines*/
+}
+body{
+    background: linear-gradient(white, gray); /*We can add gradients to the background*/
+    font-family: sans-serif;
+    font-size: 16px;
+    color: limegreen; /*Font properties*/
+}
+/*Colors can be changed using hex codes, rgb/rgba/hsl/hsla codes in a tuple*/
+

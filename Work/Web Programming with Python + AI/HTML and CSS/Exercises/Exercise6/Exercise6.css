@@ -1,0 +1,23 @@
+h1{
+    color: darkblue;
+    text-align: center;
+    text-decoration: underline;
+    line-height: 2;
+}
+
+#intro{
+    color: gray;
+    text-align: center;
+    border:4px double orange;
+}
+
+section{
+    border:2px solid darkblue;
+    border-radius: 10px;
+    background: white;
+}
+
+body{
+    background: #a19628;
+}
+

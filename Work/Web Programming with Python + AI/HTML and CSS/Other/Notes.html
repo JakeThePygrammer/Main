@@ -11,7 +11,9 @@
 </head>
 <!--Title at the top of the page.-->
 <body>
-<h1>Hi there!</h1>
+<link rel="stylesheet" href="Notes.css">
+<!--This allows for style changes-->
+<h1 id="top">Hi there!</h1>
 <!--Headers are with these tags and go 1-6-->
 <p>Today we are starting<br> HTML and CSS!</p>
 <br>
@@ -20,7 +22,7 @@
 <p><b>Bold text.</b></p>
 <p><strong>Bold text.</strong></p>
 <p><i>Italics text.</i></p>
-<p><em>Italics text.</em></p>
+<p id="It"><em>Italics text.</em></p>
 <!--Bold and italics tags.-->
 <a href="https://semosedu.mk/"> Sign up!</a>
 <!--Links are with these tags.-->
@@ -35,11 +37,11 @@
 <h4>We study : </h4>
 <ol>
     <!--This is a list with numbers.-->
-    <li>Python</li>
-    <li>CSS</li>
+    <li class="aaa">Python</li>
+    <li id="CSS1">CSS</li>
     <li>HTMl</li>
     <li>SQL</li>
-    <li>Flask</li>
+    <li class="aaa">Flask</li>
 </ol>
 <br>
 <!--This adds empty space.-->
@@ -136,6 +138,30 @@
     <br>
     <button>Submit</button> <!--Submit button-->
 </form>
-<!--WRITE NOTES FOR SEMANTICS!!!-->
+<!--The code can be divided into different areas. This will be used in CSS.-->
+<div>
+    <h6>This text is <span>inside</span> a division area</h6>
+</div>
+<!--There are also other tags-->
+<!--<article>-->
+<!--<aside>-->
+<!--<details>-->
+<!--<figcaption>-->
+<!--<figure>-->
+<!--<footer>-->
+<!--<header>-->
+<!--<main>-->
+<!--<mark>-->
+<!--<nav>-->
+<!--<section>-->
+<!--<summary>-->
+<!--<time>-->
+<nav>
+<!--Here you would add buttons for navigation using <a></a>-->
+<!--Interior links can be made by adding ids to headers/paragraphs. Don't forget the hashtag.-->
+    <a href="#It">Italics text</a>
+</nav>
+<!--Iframes are used when we want to add a different website to ours.-->
+<iframe width="560" height="315" src="https://www.youtube.com/embed/nTizYn3-QN0?list=PLWDwbXqZ2t4JWyRrcOkFNRf83jWM47LrD" title="Duran Duran - Rio (Official Music Video)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </body>
 </html>

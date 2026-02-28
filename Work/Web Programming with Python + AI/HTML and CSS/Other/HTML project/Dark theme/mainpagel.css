@@ -110,9 +110,10 @@ button:hover{
     margin-right: 20px;
 }
 
-.none1:hover{
-    background: none;
-    border: none;
+.none2{
+    background: gray;
+    border: gray solid 10px;
+    border-radius: 15px;
     box-shadow: none;
     margin : 0;
     margin-left: 20px;

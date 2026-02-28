@@ -1,8 +1,8 @@
 header, #C1{
     text-align: center;
     font :40px Roboto, sans-serif;
-    color:white;
-    text-shadow: 20px 20px 10px rgba(255, 255, 255, 0.1);
+    color:black;
+    text-shadow: 20px 20px 10px rgba(0, 0, 0, 0.1);
 }
 #nestor{
     background: white;
@@ -18,12 +18,12 @@ a{
     text-align: center;
     vertical-align: top;
     font :35px bold Roboto, sans-serif;
-    color:black;
-    background: rgba(255, 255, 255, 0.9);
-    border: rgba(255, 255, 255, 0.1) solid 10px;
+    color:white;
+    background: rgba(0, 0, 0, 0.9);
+    border: rgba(0, 0, 0, 0.1) solid 10px;
     border-radius: 15px;
     text-decoration: none;
-    box-shadow: 10px 10px 10px rgba(255, 255, 255, 0.1);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
     margin: 30px;
 }
 
@@ -32,10 +32,10 @@ a:hover{
     border: #a1a0a0 solid 10px;
     border-radius: 15px;
     text-decoration: none;
-    box-shadow: 10px 10px 10px rgba(255, 255, 255, 0.1);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
 }
 body{
-    background-color: #101032;
+    background-color: #FAFAFAFF;
 }
 #image1{
     display: flex;
@@ -43,14 +43,14 @@ body{
 }
 section, article{
     font :30px Roboto, sans-serif;
-    color:white;
+    color:black;
 }
 iframe{
     border-radius: 20px;
 }
 footer{
     font :25px Roboto, sans-serif;
-    color:white;
+    color:black;
 }
 
 .countryproject{
@@ -60,7 +60,7 @@ footer{
 }
 
 .courses1{
-    background: #000022;
+    background: #c2c2d1;
     border-radius: 15px;
     padding: 20px;
     margin: 20px;
@@ -74,10 +74,10 @@ footer{
 
 input, textarea{
     border-radius: 20px;
-    background: #101032;
-    border: white solid 5px;
+    background: #fafafa;
+    border: black solid 5px;
     font : 20px Roboto, sans-serif;
-    color: white;
+    color: black;
 }
 
 input:hover, textarea:hover{
@@ -86,9 +86,9 @@ input:hover, textarea:hover{
 
 button{
     font :30px bold Roboto, sans-serif;
-    color:black;
-    background: rgba(255, 255, 255, 0.9);
-    border: rgba(255, 255, 255, 0.1) solid 10px;
+    color:white;
+    background: rgba(0, 0, 0, 0.9);
+    border: rgba(0, 0, 0, 0.1) solid 10px;
     border-radius: 20px;
     width: auto;
     height: auto;
@@ -98,7 +98,7 @@ button{
 button:hover{
     background: #a1a0a0;
     border: #a1a0a0 solid 10px;
-    box-shadow: 15px 10px 10px rgba(255, 255, 255, 0.1);
+    box-shadow: 15px 10px 10px rgba(0, 0, 0, 0.1);
 }
 
 .none1{
@@ -121,15 +121,15 @@ button:hover{
 
 select{
     border-radius: 20px;
-    background: #101032;
-    border: white solid 3px;
+    background: #FAFAFAFF;
+    border: black solid 3px;
     font:20px Roboto, sans-serif;
-    color: white;
+    color: black;
     text-align: center;
 }
 
 table, tr, td, th{
-    border: white solid 3px;
+    border: black solid 3px;
     border-collapse: collapse;
     text-align: center;
 }

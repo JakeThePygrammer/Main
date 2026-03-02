@@ -37,13 +37,14 @@ a:hover{
 body{
     background-color: #101032;
 }
-#image1{
-        display: flex;
-        justify-content: left;
-        background: none;
+#image1, #image2{
+    display: flex;
+    justify-content: left;
+    background: none;
     border: none;
-        height: auto;
+    height: auto;
     margin: 20px;
+    box-shadow: none;
 }
 section, article{
     font :30px Roboto, sans-serif;
@@ -136,4 +137,11 @@ table, tr, td, th{
     border: white solid 3px;
     border-collapse: collapse;
     text-align: center;
+}
+
+#theme1, #theme2{
+    background: none;
+    border: none;
+    box-shadow: none;
+
 }

@@ -1,0 +1,87 @@
+header{
+    text-align: center;
+    font :40px Roboto, sans-serif;
+    color:white;
+    text-shadow: 20px 20px 10px rgba(255, 255, 255, 0.1);
+}
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+a{
+    display: inline-block;
+    text-align: center;
+    vertical-align: top;
+    font :40px bold Roboto, sans-serif;
+    color:black;
+    background: rgba(255, 255, 255, 0.9);
+    border: rgba(255, 255, 255, 0.1) solid 10px;
+    border-radius: 15px;
+    text-decoration: none;
+    box-shadow: 10px 10px 10px rgba(255, 255, 255, 0.1);
+    margin: 30px;
+}
+
+body{
+    background: linear-gradient(#18202b, #d1d9dd)    ;
+    color:white;
+    font :20px Roboto, sans-serif;
+}
+
+.none1{
+    background: none;
+    box-shadow: none;
+    border: none;
+}
+footer{
+    font :40px bold Roboto, sans-serif;
+}
+
+#buttondown{
+    background: #171717;
+    color: white;
+    border-radius: 10px;
+    border: 10px solid #171717;
+    width: auto;
+    height: auto;
+    margin: 0;
+}
+
+section > img{
+    border-radius: 20px;
+    border: 7px solid #FFFFFF;
+    margin : 0;
+}
+
+section > ul{
+    font :40px bold Roboto, sans-serif;
+    margin : 0;
+}
+
+hr{
+    border: 3px solid #FFFFFF;
+    border-radius: 5px;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section > div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+section > div > h1{
+    margin : 0;
+}
+section > h1{
+    font :60px bold Roboto, sans-serif;
+    margin : 0;
+}

@@ -38,7 +38,11 @@ body{
     background-color: #101032;
 }
 #image1{
-    display: flex;
+        display: flex;
+        justify-content: left;
+        background: none;
+    border: none;
+        height: auto;
     margin: 20px;
 }
 section, article{

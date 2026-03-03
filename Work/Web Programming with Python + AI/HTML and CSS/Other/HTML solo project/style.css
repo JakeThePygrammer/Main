@@ -49,13 +49,13 @@ footer{
     margin: 0;
 }
 
-section > img{
+#sec > img{
     border-radius: 20px;
     border: 7px solid #FFFFFF;
     margin : 0;
 }
 
-section > ul{
+#sec > ul{
     font :40px bold Roboto, sans-serif;
     margin : 0;
 }
@@ -65,23 +65,67 @@ hr{
     border-radius: 5px;
 }
 
-section{
+#sec{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-section > div{
+#sec > div{
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
 }
 
-section > div > h1{
+#sec > div > h1{
     margin : 0;
 }
-section > h1{
+#sec > h1{
     font :60px bold Roboto, sans-serif;
     margin : 0;
+}
+
+nav{
+    height: auto;
+}
+
+#nestor{
+    background: white;
+}
+
+iframe{
+    border-radius: 20px;
+}
+
+article{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background: linear-gradient(#28384e,white);
+    margin : 60px;
+    border-radius: 50px;
+    box-shadow: 10px 10px 10px rgba(255, 255, 255, 0.1);
+    border: 7px solid #000000;
+}
+
+article:hover{
+    background: linear-gradient(#28384e,white);
+    margin : 40px;
+    border-radius: 50px;
+    box-shadow: 10px 10px 10px rgba(255, 255, 255, 0.2);
+}
+
+article img{
+    border-radius: 20px;
+    margin: 5px;
+    border: 7px solid #000000;
+}
+
+#images > div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
 }

@@ -24,6 +24,12 @@ a{
     margin: 30px;
 }
 
+a:hover{
+    font :40px Roboto, sans-serif;
+    border: rgba(255, 255, 255, 0.1) solid 13px;
+    box-shadow: 10px 10px 10px rgba(255, 255, 255, 0.1);
+}
+
 body{
     background: linear-gradient(#18202b, #d1d9dd)    ;
     color:white;
@@ -96,6 +102,11 @@ nav{
 
 iframe{
     border-radius: 20px;
+    margin: 15px;
+}
+
+iframe:hover{
+    width: 60%;
 }
 
 article{
@@ -123,13 +134,22 @@ article img{
     border: 7px solid #000000;
 }
 
+.images img:hover{
+    width: 30%;
+    height: 30%;
+}
+
 #images > div{
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
 }
-
+#semos{
+    border:none;
+    margin : 20px;
+    border-radius: 0;
+}
 button{
     font :40px Roboto, sans-serif;
     margin : 10px;
@@ -138,6 +158,11 @@ button{
     box-shadow: 10px 10px 10px rgba(255, 255, 255, 0.1);
 }
 
+button:hover{
+    font :40px Roboto, sans-serif;
+    border: 13px solid #FFFFFF;
+    box-shadow: 10px 10px 10px rgba(255, 255, 255, 0.1);
+}
 .id123{
     display: flex;
     justify-content: space-between;
@@ -150,4 +175,10 @@ input,textarea{
     box-shadow: 10px 10px 10px rgba(255, 255, 255, 0.1);
     border-radius: 15px;
     border: 5px solid #000000;
+}
+
+#pronject{
+    text-align: center;
+    font :60px bold Roboto, sans-serif;
+    text-shadow: 20px 20px 10px rgba(255, 255, 255, 0.1);
 }

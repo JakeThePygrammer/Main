@@ -3,6 +3,8 @@
   <component name="SqlDialectMappings">
     <file url="file://$PROJECT_DIR$/Work/Web Programming with Python + AI/SQL/Exercises/Exercise2.sql" dialect="SQLite" />
     <file url="file://$PROJECT_DIR$/Work/Web Programming with Python + AI/SQL/Exercises/Exercise3.sql" dialect="SQLite" />
+    <file url="file://$PROJECT_DIR$/Work/Web Programming with Python + AI/SQL/Exercises/Exercise6.sql" dialect="SQLite" />
+    <file url="file://$PROJECT_DIR$/Work/Web Programming with Python + AI/SQL/Homework/Homework1.sql" dialect="SQLite" />
     <file url="PROJECT" dialect="MySQL" />
   </component>
 </project>

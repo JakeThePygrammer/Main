@@ -50,7 +50,7 @@ FROM Room
 JOIN Reservation on room.roomid = reservation.roomid
 WHERE dateandtimestart LIKE '2026-03-29 %';
 
-SELECT room.roomid, reservation.reservationid, room.roomtype, room.price, reservation.dateandtimestart, reservation.dateandtimeend
+SELECT room.roomid, reservation.reservationid, room.roomtype, reservation.price, reservation.dateandtimestart, reservation.dateandtimeend
 FROM Room
 JOIN Reservation on room.roomid = reservation.roomid;
 

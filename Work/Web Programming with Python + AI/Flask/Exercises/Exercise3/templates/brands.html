@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Brands</title>
+</head>
+<body>
+    <h1> All brands: </h1>
+    <ul>
+        {% for b in brands %}
+        <li> {{ b.id }} -> {{ b.name }} </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

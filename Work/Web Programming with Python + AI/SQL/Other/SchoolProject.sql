@@ -58,46 +58,43 @@ INSERT INTO ocenka (ocenkaid, ocenka, datum, profesorid, predmetid, ucenikid) VA
 ('O004', 5, '2026-03-24', 'P002', 'PR01', 'U001');
 
 
-
-
---Прикажете ги сите ученици со нивните предмети.
 SELECT ucenik.ime, predmet.ime
 from ucenik
 JOIN predmet ON ucenik.ucenikid=predmet.ucenikid;
---Прикажете ги сите оценки за еден конкретен ученик.
+
 SELECT ucenik.ime, ocenka.ocenka
 from ucenik
 join ocenka ON ucenik.ucenikid=ocenka.ucenikid
 ORDER BY ucenik.ime ASC;
---Пресметајте просечна оцена по предмет.
+
 SELECT predmet.ime, AVG(ocenka.ocenka)
 FROM predmet
 JOIN ocenka ON predmet.predmetid = ocenka.predmetid
 GROUP BY predmet.ime;
---Прикажете ги предметите со највисока просечна оцена.
+
 SELECT predmet.ime, AVG(ocenka.ocenka)
 FROM predmet
 JOIN ocenka ON predmet.predmetid = ocenka.predmetid
 GROUP BY predmet.ime
 ORDER BY ocenka.ocenka DESC
 LIMIT 1;
---Прикажете ги учениците со просек поголем од 4.0.
+
 SELECT ucenik.ime, AVG(ocenka.ocenka)
 FROM ucenik
 JOIN ocenka ON ucenik.ucenikid = ocenka.ucenikid
 GROUP BY ucenik.ucenikid
 HAVING AVG(ocenka.ocenka) >= 4.0;
---Избројте колку ученици има секој наставник.
+
 SELECT profesor.ime, profesor.prezime, COUNT(predmet.ucenikid)
 FROM profesor
 JOIN predmet ON profesor.profesorid = predmet.profesorid
 GROUP BY profesor.profesorid;
---Прикажете ги учениците кои немаат ниту една оценка.
+
 SELECT ucenik.ime, ocenka.ocenkaid
 FROM ucenik
 LEFT JOIN ocenka ON ucenik.ucenikid = ocenka.ucenikid
 WHERE ocenka.ocenkaid IS NULL;
---Прикажете ги топ 3 ученици според просек.
+
 SELECT ucenik.ime, AVG(ocenka.ocenka)
 FROM ucenik
 JOIN ocenka ON ucenik.ucenikid = ocenka.ucenikid

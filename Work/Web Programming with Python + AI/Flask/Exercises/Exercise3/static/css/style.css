@@ -1,4 +1,11 @@
 body{
     background-color: #93b1e2;
-    font-family: sans-serif;
+    font :40px Roboto, sans-serif;
+    color: white;
+
+}
+
+h1, h2, h3, h4, h5, h6{
+    font :60px bold Roboto, sans-serif;
+    text-align: center;
 }

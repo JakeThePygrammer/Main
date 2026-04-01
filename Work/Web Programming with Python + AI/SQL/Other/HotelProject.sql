@@ -68,3 +68,29 @@ SELECT * FROM Room
 LEFT JOIN Reservation ON Room.roomid = Reservation.roomid
 WHERE Reservation.reservationid IS NULL;
 
+SELECT room.roomid, room.roomtype, SUM(Reservation.price)
+FROM Room
+JOIN Reservation on room.roomid = reservation.roomid
+GROUP BY room.roomid;
+
+SELECT SUM(Reservation.price)
+FROM Room
+JOIN Reservation on room.roomid = reservation.roomid;
+
+SELECT SUM(Reservation.price)
+FROM Room
+JOIN Reservation on room.roomid = reservation.roomid
+WHERE dateandtimestart BETWEEN '2026-04-01 00:00:01' AND '2026-05-01 00:00:01';
+
+SELECT User.userid, User.name, COUNT(reservation.roomid)
+FROM User
+JOIN Reservation ON User.userid = reservation.userid
+GROUP BY User.userid
+HAVING COUNT(reservation.roomid) > 1;
+
+SELECT COUNT(reservation.roomid)
+FROM Room
+JOIN Reservation on room.roomid = reservation.roomid
+WHERE dateandtimestart BETWEEN '2026-04-01 00:00:01' AND '2026-05-01 00:00:01';
+
+

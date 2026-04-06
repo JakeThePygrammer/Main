@@ -9,12 +9,12 @@ def index():
 
 @app.route("/home")
 def home():
-    return render_template("homepage.html")
+    return render_template("index.html")
 
 @app.route("/products")
 def products():
     products = get_all_products()
-    return render_template("products.html", products=products)
+    return render_template("cities.html", products=products)
 
 @app.route("/products/<int:id>")
 def product(id):
@@ -23,7 +23,7 @@ def product(id):
 
     # 2. renderiraj template so site podatoci za ovoj produkt (id, name, price, category, brand)
 
-    return render_template("product.html", product=product)
+    return render_template("city_details.html", product=product)
 
 @app.route("/user/<name>")
 def user(name):

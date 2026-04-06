@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cities</title>
+</head>
+<body>
+    <a href="http://127.0.0.1:5000/"> Home!</a>
+    <h1> All cities: </h1>
+    <ul>
+        {% for p in cities %}
+        <li>City : {{ p.name }}</li>
+        <li>Country : {{ p.country }}</li>
+        <li>Population : {{ p.population }}</li>
+        <li>Architecture : {{ p.architecture }}</li>
+        <li>Characteristics : {{ p.characteristics }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

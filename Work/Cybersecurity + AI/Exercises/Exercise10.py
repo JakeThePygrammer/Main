@@ -11,7 +11,12 @@ with open('authentication_logs.csv', newline='') as f:
             countersuccess += 1
         if r['status'] == 'FAILED':
             counterfail += 1
+    precent = counterfail / (counterfail + countersuccess) * 100
+    print(f"Failure rate : {precent}%")
+    a = input("Please enter the desired request type(VPN/WEB/RDP) : ")
+    for r in rows:
+        if r['service'] == a:
+            print(r)
 
-precent = countersuccess / (counterfail+countersuccess)*100
-print(precent)
+
 

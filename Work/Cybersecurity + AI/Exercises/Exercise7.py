@@ -1,6 +1,6 @@
 import sys
 
-data = sys.stdin.read().split()
+data = "sys.stdin.read().split()"
 
 datalist = data[0].split(".")
 valid = "VALID"
